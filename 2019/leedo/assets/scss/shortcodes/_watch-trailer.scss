@@ -1,0 +1,21 @@
+/* SHORTCODE: WATCH TRAILER
+-------------------------------------------- */
+
+.vlt-watch-trailer {
+	@extend %vlt_display_1;
+	color: map-get($colors, 'c0');
+
+	i {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 45px;
+		width: 45px;
+		margin-right: 15px;
+		font-size: 14px;
+		color: currentColor;
+		border: 2px solid currentColor;
+		border-radius: 50%;
+	}
+
+}

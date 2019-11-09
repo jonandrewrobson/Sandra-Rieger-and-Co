@@ -1,0 +1,16 @@
+/* WIDGET: RECENT COMMENTS
+-------------------------------------------- */
+
+.vlt-widget.widget_recent_comments {
+	@extend .vlt-widget.widget_categories;
+	line-height: inherit;
+
+	li + li {
+		margin-top: 10px;
+	}
+
+}
+
+.vlt-widget.vlt-widget--white.widget_recent_comments {
+	@extend .vlt-widget.vlt-widget--white.widget_categories;
+}

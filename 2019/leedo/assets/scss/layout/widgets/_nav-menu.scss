@@ -1,0 +1,37 @@
+/* WIDGET: NAV MENU
+-------------------------------------------- */
+
+.vlt-widget.widget_nav_menu {
+	@extend .vlt-widget.widget_categories;
+
+	.sf-with-ul::after {
+		content: '+';
+		padding-left: 5px;
+	}
+
+	.sfHover > .sf-with-ul::after {
+		content: '-';
+	}
+
+	ul.sub-menu {
+		display: none;
+		padding-top: 5px;
+	}
+
+}
+
+.vlt-widget.vlt-widget--white.widget_nav_menu {
+	@extend .vlt-widget.vlt-widget--white.widget_categories;
+
+	ul.menu {
+		font-family: map-get($fonts, 'sf');
+		line-height: 1.8;
+		columns: 2;
+
+		li + li {
+			margin-top: 0;
+		}
+
+	}
+
+}

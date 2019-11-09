@@ -1,0 +1,40 @@
+/* PARTIAL: BACK TO TOP
+-------------------------------------------- */
+
+.vlt-btn.vlt-btn--back-to-top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	height: 50px;
+	width: 50px;
+	padding: 0;
+	font-size: 20px;
+	line-height: 1;
+	border-radius: 50%;
+	box-shadow: 0 1px 3px 0px rgba(map-get($colors, 'c0'), 0.1);
+	z-index: z('back-to-top');
+
+	i {
+		margin: 0;
+	}
+
+	@include mq('medium') {
+		display: none;
+	}
+
+	&.hidden {
+		opacity: 0;
+		transform: translateY(100%);
+		visibility: hidden;
+	}
+
+	&.visible {
+		opacity: 1;
+		transform: translateY(0);
+		visibility: visible;
+	}
+
+}

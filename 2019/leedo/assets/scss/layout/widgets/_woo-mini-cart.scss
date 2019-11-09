@@ -1,0 +1,35 @@
+/* WIDGET: WOO MINI CART
+-------------------------------------------- */
+
+.widget_shopping_cart {
+
+	.woocommerce-mini-cart__total {
+		margin-top: 30px;
+		color: map-get($colors, 'c26');
+
+		.amount {
+			font-family: map-get($fonts, 'pf');
+			font-size: 16px;
+			font-weight: 500;
+			color: map-get($colors, 'c36');
+		}
+
+	}
+
+	.woocommerce-mini-cart__total,
+	.woocommerce-mini-cart__buttons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		a {
+			flex: 1;
+		}
+
+		a + a {
+			margin-left: 15px;
+		}
+
+	}
+
+}

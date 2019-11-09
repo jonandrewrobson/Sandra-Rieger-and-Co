@@ -1,0 +1,110 @@
+/* WORK: DEFAULT
+-------------------------------------------- */
+
+.vp-portfolio__items-style-default {
+
+	.vp-portfolio__item a {
+		outline: none;
+		box-shadow: none;
+	}
+
+	// transitions
+
+	.vp-portfolio__item-img {
+		overflow: hidden;
+	}
+
+	.vp-portfolio__item-img img {
+		will-change: transform;
+		transition: transform 2s cubic-bezier(0.08, 0.43, 0.24, 1);
+	}
+
+	.vp-portfolio__item:hover {
+
+		.vp-portfolio__item-img img {
+			transform: scale(1.1);
+		}
+
+	}
+
+	// meta
+
+	.vp-portfolio__item-meta {
+		position: relative;
+		padding: 30px 15px;
+
+		> * + * {
+			margin-top: 5px;
+		}
+
+	}
+
+	.vp-portfolio__item-meta-title {
+		margin: 0;
+		font-size: 24px;
+		line-height: 1.2;
+
+		@include lowercase {
+			text-transform: lowercase;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+	}
+
+	.vp-portfolio__item-meta-date {
+		font-size: 0.85em;
+	}
+
+	.vp-portfolio__item-meta-categories {
+		margin: 10px 0 0;
+		padding: 0;
+		list-style-type: none;
+
+		.vp-portfolio__item-meta-category {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+
+			a {
+				display: block;
+			}
+
+		}
+
+		.vp-portfolio__item-meta-category a::before {
+			content: ', ';
+		}
+
+		.vp-portfolio__item-meta-category:first-of-type a::before {
+			content: none;
+		}
+
+	}
+
+	.vp-portfolio__item-meta-excerpt {
+		opacity: 0.8;
+	}
+
+	.vp-portfolio__item-meta-read-more {
+		display: inline-block;
+		margin-top: 10px;
+	}
+
+	// align
+
+	.vp-portfolio__item-align-left {
+		text-align: left;
+	}
+
+	.vp-portfolio__item-align-center {
+		text-align: center;
+	}
+
+	.vp-portfolio__item-align-right {
+		text-align: right;
+	}
+
+}

@@ -1,0 +1,15 @@
+/* PAGE: BLOG
+-------------------------------------------- */
+
+// import
+
+@import
+	'blog/post/partials/post-thumbnail',
+	'blog/post/partials/post-title',
+	'blog/post/partials/post-meta';
+
+@import
+	'blog/post/default',
+	'blog/post/masonry',
+	'blog/post/also-like',
+	'blog/post/single';

@@ -1,0 +1,25 @@
+/* SHORTCODE: ALERTS
+-------------------------------------------- */
+
+.vlt-alert {
+	position: relative;
+	margin: 0 0 30px;
+	padding: 20px 40px !important;
+	color: map-get($colors, 'c28');
+	list-style-type: none;
+	border-top: 2px solid map-get($colors, 'p1');
+	background-color: map-get($colors, 'c2');
+
+	a:hover {
+		color: inherit;
+	}
+
+	p:first-of-type {
+		margin-top: 0;
+	}
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+
+}

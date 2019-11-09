@@ -1,0 +1,59 @@
+/* SHORTCODE: ARTIST ALBUM
+-------------------------------------------- */
+
+.vlt-artist-album {
+
+	@include mq('medium', min) {
+		padding-right: 110px;
+	}
+
+	&__cover {
+		position: relative;
+
+		.music-plate {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 15px;
+			transition: transform  300ms ease-in-out;
+			z-index: -1;
+		}
+
+	}
+
+	&__metas {
+		padding: 15px 0 0;
+		text-align: center;
+
+		h5 {
+			margin: 0;
+			font-size: 24px;
+			color: map-get($colors, 'c0');
+		}
+
+		span {
+			font-size: 16px;
+			color: map-get($colors, 'c13');
+		}
+
+	}
+
+	&:hover {
+
+		@include mq('medium', min) {
+
+			.vlt-artist-album__cover {
+
+				.music-plate {
+					transform: translateX(110px) rotate(45deg);
+				}
+
+			}
+
+		}
+
+	}
+
+}

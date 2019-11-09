@@ -1,0 +1,179 @@
+/* CHECKOUT
+-------------------------------------------- */
+
+.woocommerce-billing-fields {
+
+	h3 {
+		margin: 0 0 30px;
+
+		@include lowercase {
+			text-transform: lowercase;
+		}
+
+	}
+
+}
+
+.vlt-additional-fields-wrap {
+	margin-top: 30px;
+}
+
+.vlt-shipping-fields-wrap {
+	margin-top: 30px;
+}
+
+.vlt-checkout-review-order {
+	padding-left: 15px;
+
+	@include mq('medium') {
+		padding-left: 0;
+		margin-top: 50px;
+	}
+
+}
+
+/* CHECKOUT PAYMENT
+-------------------------------------------- */
+
+.vlt-checkout-payment {
+	font-size: 16px;
+
+	.form-row:last-child {
+		margin-bottom: 0;
+	}
+
+	ul {
+		margin: 0 0 30px;
+		padding: 0;
+		list-style-type: none;
+		border: 1px solid map-get($colors, 'c6');
+
+		li {
+			padding: 15px 20px;
+			border-bottom: 1px solid map-get($colors, 'c6');
+
+			&:last-child {
+				border: none;
+			}
+
+			p {
+				margin-top: 10px;
+				margin-bottom: 0;
+				line-height: 1.65;
+			}
+
+			.vlt-custom-radio-label {
+
+				img, a {
+					display: none;
+				}
+
+			}
+
+		}
+	}
+
+	.woocommerce-privacy-policy-text {
+		margin-bottom: 30px;
+	}
+
+}
+
+
+/* REVIEW ORDER TABLE
+-------------------------------------------- */
+
+.vlt-checkout-review-order-table {
+	font-size: 16px;
+
+	tr,
+	td,
+	th {
+		padding: 0;
+		border: none;
+	}
+
+	tbody td {
+		padding-bottom: 30px;
+	}
+
+	tfoot {
+		font-size: 16px;
+		background-color: map-get($colors, 'c2');
+
+		th,
+		td {
+			padding: 15px 20px;
+		}
+
+		td {
+			text-align: right;
+			color: map-get($colors, 'c36');
+		}
+
+	}
+
+	.woocommerce-shipping-methods {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+}
+
+/* CHECKOUT PRODUCT
+-------------------------------------------- */
+
+.vlt-checkout-product {
+	display: flex;
+	align-items: center;
+
+	&__thumbnail {
+		margin-right: 20px;
+		line-height: 0;
+
+		img {
+			display: block;
+			width: 100px;
+		}
+
+	}
+
+	&__info {
+
+		h5 {
+			margin: 0 0 5px;
+			font-size: 18px;
+		}
+
+		.amount {
+			font-family: map-get($fonts, 'pf');
+			font-weight: 600;
+			color: map-get($colors, 'p1');
+		}
+
+	}
+
+}
+
+/* COUPON FORM
+-------------------------------------------- */
+
+.vlt-woocommerce-form-coupon {
+	max-width: 500px;
+	margin-bottom: 50px;
+
+	.vlt-btn {
+		flex-shrink: 0;
+	}
+
+}
+
+.woocommerce-form-coupon-toggle {
+	margin-bottom: 30px;
+
+	.woocommerce-info {
+		margin-bottom: 0;
+	}
+
+}

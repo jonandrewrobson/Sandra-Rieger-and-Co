@@ -1,0 +1,17 @@
+/* FOOTER: STYLE 1
+-------------------------------------------- */
+
+.vlt-footer--style-1 {
+	padding: 140px 0;
+
+	.vlt-footer-logo + .vlt-footer-copyright,
+	.vlt-footer-logo + .vlt-footer-socials,
+	.vlt-footer-copyright + .vlt-footer-socials {
+		margin-top: 25px;
+	}
+
+	.vlt-footer-copyright {
+		color: map-get($colors, 'c15');
+	}
+
+}

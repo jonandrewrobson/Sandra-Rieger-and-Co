@@ -1,0 +1,81 @@
+/* PAGE: PORTFOLIO
+-------------------------------------------- */
+
+.vp-portfolio.vp-portfolio__loading .vp-portfolio__items-wrap,
+.vp-portfolio.vp-portfolio__loading .vp-portfolio__filter-wrap,
+.vp-portfolio.vp-portfolio__loading .vp-portfolio__sort-wrap,
+.vp-portfolio.vp-portfolio__loading .vp-portfolio__pagination-wrap {
+	opacity: 1 !important;
+}
+
+.vp-portfolio__preloader {
+	margin-top: 50px !important;
+
+	span {
+		background-color: map-get($colors, 'c5') !important;
+	}
+
+}
+
+img.visual-portfolio-lazyload:not(.lazyloaded) {
+	background-color: map-get($colors, 'c5');
+}
+
+.js-caption {
+	position: fixed;
+	top: 100px;
+	left: 100px;
+	width: auto;
+	height: auto;
+	margin: 25px 0 0;
+	white-space: nowrap;
+	opacity: 0;
+	background-color: map-get($colors, 'c0');
+	animation: vlt_fade_in 150ms ease-in-out reverse forwards;
+	pointer-events: none;
+	overflow: hidden;
+	z-index: z('portfolio-js-caption');
+
+	h4 {
+		margin: 0;
+		padding: 5px 15px;
+		font-size: 24px;
+		line-height: 1.2;
+		transform: translateY(150%);
+
+		@include lowercase {
+			text-transform: lowercase;
+		}
+
+	}
+
+}
+
+.js-caption--active {
+	animation: vlt_fade_in 300ms ease-in-out normal forwards;
+
+	h4 {
+		transform: translateY(0);
+		transition: transform 1s cubic-bezier(.07, .72, .24, 1);
+	}
+
+}
+
+// import
+
+@import
+	'portfolio/filters',
+	'portfolio/pagination',
+	'portfolio/slider';
+
+@import
+	'portfolio/style/default',
+	'portfolio/style/emerge',
+	'portfolio/style/fade',
+	'portfolio/style/fly';
+
+@import
+	'portfolio/style/style-1',
+	'portfolio/style/style-2',
+	'portfolio/style/style-3',
+	'portfolio/style/style-4';

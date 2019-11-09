@@ -1,0 +1,44 @@
+/* WIDGET: CATEGORIES
+-------------------------------------------- */
+
+.vlt-widget.widget_categories {
+	font-family: map-get($fonts, 'pf');
+	font-weight: 600;
+	color: map-get($colors, 'c23');
+
+	li::before {
+		content: '▪';
+		margin-right: 12px;
+		color: map-get($colors, 'p2');
+	}
+
+	li + li,
+	ul.children {
+		margin-top: 10px;
+	}
+
+	a {
+		margin-right: 3px;
+		color: map-get($colors, 'c36');
+
+		&:hover {
+			color: map-get($colors, 'p1');
+		}
+
+	}
+
+}
+
+.vlt-widget.vlt-widget--white.widget_categories {
+	font-weight: 400;
+
+	a {
+		color: map-get($colors, 'c12');
+
+		&:hover {
+			color: map-get($colors, 'p1');
+		}
+
+	}
+
+}

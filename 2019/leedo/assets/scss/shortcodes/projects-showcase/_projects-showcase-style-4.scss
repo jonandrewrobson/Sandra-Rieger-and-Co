@@ -1,0 +1,156 @@
+/* STYLE 4
+-------------------------------------------- */
+
+.vlt-projects-showcase--style-4 {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	min-height: 100vh;
+	background-color: map-get($colors, 'c1');
+
+	// links
+	.vlt-projects-showcase__links {
+		position: absolute;
+		bottom: 50px;
+		left: 50px;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		z-index: 4;
+
+		@include mq('small') {
+			bottom: 15px;
+			left: 15px;
+		}
+
+		li + li {
+			margin-top: 40px;
+
+			@include mq('small') {
+				margin-top: 30px;
+			}
+
+		}
+
+	}
+
+	.vlt-projects-showcase__link {
+		color: map-get($colors, 'c0');
+
+		h3 {
+			display: inline-block;
+			margin: 0;
+			color: inherit;
+
+			@include lowercase {
+				text-transform: lowercase;
+			}
+
+			@include mq('small') {
+				font-size: 28px;
+			}
+
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+
+			&::after {
+				content: '\e91b';
+				margin-left: 20px;
+				font-family: map-get($fonts, 'lf');
+				font-size: 18px;
+				line-height: 1;
+				opacity: 0;
+				transform: translateX(-10px);
+				transition-property: opacity, transform;
+				transition-duration: 300ms;
+				transition-timing-function: ease-in-out;
+			}
+
+			&:hover {
+				color: inherit;
+			}
+
+		}
+
+		span.vlt-display-1 {
+			display: block;
+			margin: 10px 0 0;
+			font-size: 14px;
+			transition: all 300ms ease-in-out;
+		}
+
+		&.is-active {
+			color: map-get($colors, 'p3');
+
+			a {
+				color: inherit;
+
+				&::after {
+					opacity: 1;
+					transform: translateX(0);
+				}
+
+			}
+
+		}
+
+	}
+
+	// images
+	.vlt-projects-showcase__images,
+	.vlt-projects-showcase__images::before,
+	.swiper-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.vlt-projects-showcase__images {
+		background-color: map-get($colors, 'c36');
+
+		&::before {
+			content: '';
+			background-color: rgba(map-get($colors, 'c32'), 0.3);
+			z-index: 2;
+		}
+
+	}
+
+	.vlt-projects-showcase__image {
+		height: 100%;
+		width: 100%;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			font-family: 'object-fit: cover;';
+			object-fit: cover;
+		}
+
+		img.swiper-lazy {
+			opacity: 0;
+			transform: scale(0.95);
+			transition: all 300ms ease-in-out;
+		}
+
+	}
+
+	.swiper-slide-active {
+
+		img.swiper-lazy-loaded {
+			opacity: 1;
+			transform: scale(1);
+			transition: all 600ms 300ms ease-in-out;
+		}
+
+	}
+
+}

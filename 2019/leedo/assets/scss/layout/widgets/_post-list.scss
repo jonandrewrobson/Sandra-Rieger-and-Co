@@ -1,0 +1,50 @@
+/* WIDGET: POST LIST
+-------------------------------------------- */
+
+.vlt-widget.vlt-widget-postlist {
+	list-style-type: none;
+
+	li + li {
+		margin-top: 30px;
+	}
+
+	.vlt-widget-post {
+		display: flex;
+		align-items: center;
+
+		&__thumbnail {
+			flex-shrink: 0;
+			position: relative;
+			width: 80px;
+
+			a,
+			img {
+				display: block;
+			}
+
+		}
+
+		&__content {
+			padding-left: 20px;
+
+			h5 {
+				margin: 0;
+				font-size: 18px;
+				font-weight: 600;
+			}
+
+		}
+
+	}
+
+}
+
+.vlt-widget.vlt-widget-postlist.vlt-widget--white {
+
+	.vlt-widget-post__content h5 {
+		font-size: 16px;
+		font-weight: 400;
+		color: map-get($colors, 'c0');
+	}
+
+}

@@ -1,0 +1,519 @@
+/* BODY
+-------------------------------------------- */
+
+body {
+	min-width: 320px;
+	margin: 0;
+	padding: 0;
+
+	@if $smooth_font {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+}
+
+/* IMAGE
+-------------------------------------------- */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* PARAGRAPH
+-------------------------------------------- */
+
+p {
+	margin: 0 0 30px;
+
+	&:empty {
+		display: none;
+	}
+
+}
+
+/* STRONG
+-------------------------------------------- */
+
+strong {
+	font-weight: 700;
+}
+
+/* MARK
+-------------------------------------------- */
+
+mark {
+	@extend .vlt-highlight;
+	background-color: transparent;
+}
+
+/* LINK
+-------------------------------------------- */
+
+a {
+	color: inherit;
+	text-decoration: none;
+	transition:	all 300ms ease-in-out;
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+		outline: none;
+	}
+
+	&:hover {
+		color: map-get($colors, 'p1');
+	}
+
+}
+
+/* HEADINGS
+-------------------------------------------- */
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	padding: 0;
+	margin: 15px 0;
+}
+
+/* LIST
+-------------------------------------------- */
+
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+}
+
+ul.vlt-list-style,
+ul.vlt-list-style ul {
+	list-style-type: none;
+
+	ol,
+	ul,
+	li:not(:first-child) {
+		margin-top: 10px;
+	}
+
+	li {
+		position: relative;
+		padding-left: 40px;
+
+		&::before {
+			content: '';
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: .65rem;
+			left: 15px;
+			height: .35rem;
+			width: .35rem;
+			background-color: map-get($colors, 'p2');
+		}
+
+	}
+
+}
+
+ol.vlt-list-style,
+ol.vlt-list-style ol {
+	list-style-type: none;
+	counter-reset: ol;
+
+	ol,
+	ul,
+	li:not(:first-child) {
+		margin-top: 10px;
+	}
+
+	li {
+		position: relative;
+		padding-left: 40px;
+
+		&::before {
+			content: counter(ol);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 1.5rem;
+			height: 1.5rem;
+			font-family: map-get($fonts, 'pf');
+			font-size: 80%;
+			line-height: 1;
+			font-weight: 500;
+			color: map-get($colors, 'c0');
+			border-radius: 50%;
+			background-color: map-get($colors, 'p2');
+			counter-increment: ol;
+		}
+
+	}
+
+}
+
+/* DIVIDER
+-------------------------------------------- */
+
+hr {
+	margin: 40px 0;
+	border: none;
+	border-bottom: 1px solid map-get($colors, 'c5');
+}
+
+/* ADDRESS
+-------------------------------------------- */
+
+address {
+	margin: 0 0 30px 0;
+	font-family: map-get($fonts, 'pf');
+	font-size: 20px;
+	font-weight: 500;
+	font-style: normal;
+	color: map-get($colors, 'p1');
+}
+
+/* BLOCKQUOTE
+-------------------------------------------- */
+
+blockquote {
+	margin: 0 0 30px 0;
+	padding: 0 10px;
+	text-align: center;
+	color: map-get($colors, 'p1');
+
+	p {
+		margin-bottom: 0;
+	}
+
+}
+
+cite {
+	@extend .vlt-display-1;
+	display: block;
+	margin: 15px 0 0;
+	font-style: normal;
+	color: map-get($colors, 'c17');
+}
+
+.wp-block-quote:not(.is-large):not(.is-style-large) {
+	margin: 30px 0;
+	padding-left: 0;
+	border: none;
+}
+
+.wp-block-quote.is-style-large,
+.wp-block-quote.is-large {
+	margin: 30px 0;
+	padding: 0;
+}
+
+.wp-block-quote cite,
+.wp-block-quote.is-style-large cite,
+.wp-block-pullquote cite,
+.wp-block-pullquote.is-style-solid-color blockquote cite {
+	@extend cite;
+	text-align: center;
+}
+
+.wp-block-pullquote {
+	padding: 60px 0;
+
+	blockquote {
+		margin: 0;
+	}
+
+	cite {
+		color: currentColor;
+	}
+
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+	text-align: center;
+}
+
+/* PREFORMATTED
+-------------------------------------------- */
+
+code {
+	padding: 5px 8px;
+	font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+	color: map-get($colors, 'c0');
+	background-color: map-get($colors, 'p1');
+}
+
+pre {
+	max-width: 100%;
+	padding: 30px;
+	margin: 0 0 30px 0;
+	font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+	line-height: 120%;
+	white-space: pre-wrap;
+	color: map-get($colors, 'c36');
+	border-left: 6px solid map-get($colors, 'p1');
+	background-color: map-get($colors, 'c2');
+	tab-size: 4;
+	clear: both;
+	overflow: auto;
+}
+
+/* FORM / INPUT / TEXTAREA / SELECT
+-------------------------------------------- */
+
+form {
+	max-width: 100%;
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+	color: map-get($colors, 'c36');
+	user-select: none;
+
+	abbr {
+		text-decoration: none;
+		border: none !important;
+	}
+
+}
+
+input[type='text'],
+input[type='date'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+input[type='url'],
+input[type='search'],
+input[type='number'],
+textarea,
+select {
+	display: block;
+	width: 100%;
+	padding: 15px 30px;
+	margin: 0;
+	border: 2px solid map-get($colors, 'c6');
+	border-radius: 0;
+	background-color: map-get($colors, 'c0');
+	box-shadow: none;
+	appearance: none;
+	transition: all  300ms ease-in-out;
+	outline: none;
+
+	&.vlt-border-white {
+		border-color: map-get($colors, 'c0');
+	}
+
+}
+
+select {
+	padding-right: 35px;
+	background-image: url('../img/select.png');
+	background-position: right 30px bottom 50%;
+	background-repeat: no-repeat;
+	background-size: 10px 6px;
+	appearance: none;
+}
+
+textarea {
+	width: 100%;
+	max-width: 100%;
+	transition: border-color 300ms ease-in-out;
+}
+
+input[type='text'],
+input[type='date'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+input[type='url'],
+input[type='search'],
+input[type='number'],
+textarea,
+select {
+
+	&:focus {
+		border-color: map-get($colors, 'p1');
+		outline: none;
+	}
+
+	@include input-placeholder {
+		color: map-get($colors, 'c22');
+		opacity: 1;
+	}
+
+}
+
+.vlt-form-group {
+	display: block;
+	position: relative;
+	margin-bottom: 30px;
+
+	&--small {
+		margin-bottom: 20px;
+	}
+
+}
+
+.vlt-form-row {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(1, 1fr);
+
+	&.two-col {
+		grid-template-columns: repeat(2, 1fr);
+
+		@include mq('medium') {
+			grid-gap: 0;
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+	}
+
+}
+
+/* CHECKBOX
+-------------------------------------------- */
+
+.vlt-custom-checkbox,
+.vlt-custom-radio,
+.vlt-custom-checkbox-wrap input[type='checkbox'],
+.wpcf7-acceptance input[type='checkbox'],
+.vlt-subscribe-form__checkbox input[type='checkbox'] {
+	position: absolute;
+	top: -100%;
+	left: 0;
+	visibility: hidden;
+}
+
+.vlt-custom-checkbox-label,
+.vlt-custom-radio-label,
+.wpcf7-acceptance .wpcf7-list-item-label,
+.vlt-subscribe-form__checkbox span {
+	position: relative;
+	padding-left: 25px;
+	margin-bottom: 0;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		border: 2px solid map-get($colors, 'c6');
+		cursor: pointer;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+}
+
+.vlt-custom-checkbox-label,
+.vlt-custom-checkbox-wrap .wpcf7-list-item-label,
+.wpcf7-acceptance .wpcf7-list-item-label,
+.vlt-subscribe-form__checkbox span {
+
+	&::before {
+		top: 4px;
+		left: 0;
+		height: 14px;
+		width: 14px;
+	}
+
+}
+
+.wpcf7-acceptance .wpcf7-list-item-label,
+.vlt-subscribe-form__checkbox span {
+
+	&::before {
+		top: 2px;
+	}
+
+}
+
+.vlt-custom-radio-label {
+
+	&::before {
+		top: 4px;
+		left: 0;
+		width: 14px;
+		height: 14px;
+		border-color: map-get($colors, 'c6');
+		border-radius: 14px;
+	}
+
+}
+
+.vlt-custom-checkbox:checked + .vlt-custom-checkbox-label::before,
+.wpcf7-acceptance input[type='checkbox']:checked + .wpcf7-list-item-label::before,
+.vlt-subscribe-form__checkbox input[type='checkbox']:checked + span::before {
+	content: '\f00c';
+	font-family: map-get($fonts, 'fa');
+	font-weight: 900;
+	color: map-get($colors, 'p1');
+	font-size: 16px;
+	line-height: 8px;
+	text-align: center;
+}
+
+.vlt-custom-radio:checked + .vlt-custom-radio-label::before {
+	border-color: transparent;
+	background-color: map-get($colors, 'p1');
+}
+
+/* DEFINITION LIST
+-------------------------------------------- */
+
+dl {
+	margin: 0 0 30px 0;
+}
+
+dt {
+	font-family: map-get($fonts, 'pf');
+	font-size: 22px;
+	font-weight: 700;
+	color: map-get($colors, 'p1');
+}
+
+dd {
+	padding: 0;
+	margin: 8px 0 0 0;
+}
+
+dd + dt {
+	margin-top: 30px;
+}
+
+/* TABLE
+-------------------------------------------- */
+
+table {
+	width: 100%;
+	max-width: 100%;
+	margin: 0 0 30px 0;
+	text-align: left;
+	border-collapse: collapse;
+
+	td,
+	th {
+		padding: 12px 20px;
+		border: 1px solid map-get($colors, 'c5');
+	}
+
+	tr th,
+	thead th {
+		@extend %vlt_display_1;
+		color: map-get($colors, 'c36');
+	}
+
+}

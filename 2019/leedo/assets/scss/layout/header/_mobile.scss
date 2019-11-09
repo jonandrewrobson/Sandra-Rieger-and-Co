@@ -1,0 +1,106 @@
+/* HEADER: MOBILE
+-------------------------------------------- */
+
+/* NAVBAR
+-------------------------------------------- */
+
+.vlt-header--mobile {
+
+	.vlt-navbar {
+		border-bottom: 1px solid map-get($colors, 'c5');
+
+		.text-right {
+
+			.vlt-menu-shop-cart,
+			.vlt-menu-search-icon {
+				margin-left: 15px;
+			}
+
+		}
+
+		.text-left {
+
+			.vlt-menu-shop-cart,
+			.vlt-menu-search-icon {
+				margin-right: 10px;
+			}
+
+		}
+
+	}
+
+}
+
+/* NAVIGATION
+-------------------------------------------- */
+
+.vlt-mobile-navigation {
+	display: none;
+	position: absolute;
+	top: calc(100% + 1px);
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid map-get($colors, 'c5');
+	background-color: map-get($colors, 'c0');
+	z-index: 1;
+
+	.vlt-no-menu-message {
+		margin: 15px 0;
+	}
+
+	.sf-menu {
+
+		li {
+			display: block;
+			float: none;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			position: relative;
+			padding: 14px 0;
+			font-size: 16px;
+			line-height: 1;
+			color: map-get($colors, 'c36');
+			text-align: left;
+			border-bottom: 1px dashed map-get($colors, 'c5');
+		}
+
+		li:last-child a {
+			border-bottom: none;
+		}
+
+		ul.sub-menu {
+			position: static;
+			padding-left: 15px;
+			font-size: 14px;
+			font-style: italic;
+
+			a {
+				border-bottom: 1px dashed map-get($colors, 'c5');
+			}
+
+		}
+
+		li.current-menu-item > a,
+		li.current_page_item > a,
+		li:hover > a {
+			color: map-get($colors, 'p1');
+		}
+
+		li.menu-item-has-children > a::after {
+			content: '\e90b';
+			font-family: map-get($fonts, 'lf');
+			font-style: normal;
+			font-size: 12px;
+		}
+
+		li.sfHover > a::after {
+			content: '\e902';
+		}
+
+	}
+
+}

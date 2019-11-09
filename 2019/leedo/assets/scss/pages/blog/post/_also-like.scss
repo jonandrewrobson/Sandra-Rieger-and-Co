@@ -1,0 +1,12 @@
+/* POST: ALSO LIKE
+-------------------------------------------- */
+
+.vlt-post--style-also-like {
+	@extend .vlt-post--style-masonry;
+	margin-bottom: 60px;
+
+	.vlt-post-content {
+		padding: 25px 0 0;
+	}
+
+}

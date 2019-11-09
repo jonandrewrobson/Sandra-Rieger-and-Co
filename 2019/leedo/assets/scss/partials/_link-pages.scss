@@ -1,0 +1,34 @@
+/* PARTIAL: LINK PAGES
+-------------------------------------------- */
+
+.vlt-link-pages {
+	margin-top: 60px;
+
+	h5 {
+		margin: 0 0 10px;
+	}
+
+	.sep {
+		margin: 0 15px;
+		color: map-get($colors, 'c5');
+	}
+
+	a {
+		display: flex;
+		align-items: center;
+	}
+
+	i {
+		font-size: 16px;
+
+		&.leedo-right-arrow {
+			margin-left: 15px;
+		}
+
+		&.leedo-left-arrow {
+			margin-right: 15px;
+		}
+
+	}
+
+}

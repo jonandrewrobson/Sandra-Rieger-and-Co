@@ -1,0 +1,38 @@
+/* PARTIAL: SITE PROTECTION
+-------------------------------------------- */
+
+.vlt-site-protection {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	opacity: 0;
+	background-color: rgba(map-get($colors, 'c36'), 0.6);
+	transition: opacity 150ms linear;
+	visibility: hidden;
+	user-select: none;
+	z-index: z('site-protection');
+
+	> * {
+		margin: 0;
+		color: map-get($colors, 'c0');
+		opacity: 0;
+	}
+
+	&--visible {
+		opacity: 1;
+		transition: opacity 300ms linear;
+		visibility: visible;
+
+		> * {
+			animation: vlt_blink_in 300ms 300ms ease-in-out forwards;
+		}
+
+	}
+
+}

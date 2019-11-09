@@ -1,0 +1,25 @@
+/* SHORTCODE: PROGRESS BAR CIRCLE
+-------------------------------------------- */
+
+.vlt-progress-bar-circle {
+
+	&__bar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		h5 {
+			position: absolute;
+			margin: 0;
+			font-size: 38px;
+
+			&::after {
+				content: '%';
+			}
+
+		}
+
+	}
+
+}

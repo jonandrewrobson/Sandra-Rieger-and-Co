@@ -1,0 +1,14 @@
+/* PARTIAL: POST META
+-------------------------------------------- */
+
+.vlt-post-meta {
+	font-family: map-get($fonts, 'pf');
+	color: map-get($colors, 'p1');
+
+	span + span::before {
+		content: '/';
+		margin-left: 8px;
+		margin-right: 10px;
+	}
+
+}

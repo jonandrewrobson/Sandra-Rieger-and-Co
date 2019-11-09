@@ -1,0 +1,48 @@
+/* WIDGET: CALENDAR
+-------------------------------------------- */
+
+.vlt-widget.widget_calendar {
+	font-family: map-get($fonts, 'pf');
+
+	tr,
+	td,
+	th {
+		padding: 10px 5px;
+		text-align: center;
+		border-color: map-get($colors, 'p1');
+	}
+
+	thead {
+
+		th {
+			padding: 15px 5px;
+		}
+
+	}
+
+	caption {
+		padding: 15px 0 0;
+		font-weight: 600;
+		color: map-get($colors, 'c36');
+	}
+
+	#today {
+		color: map-get($colors, 'c0');
+		background-color: map-get($colors, 'p1');
+
+		&:hover {
+			color: map-get($colors, 'c0');
+		}
+
+	}
+
+}
+
+.vlt-widget.widget_calendar.vlt-widget--white {
+
+	th,
+	caption {
+		color: map-get($colors, 'c0');
+	}
+
+}

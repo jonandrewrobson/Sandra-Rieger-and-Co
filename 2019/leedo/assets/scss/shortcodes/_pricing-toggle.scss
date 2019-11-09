@@ -1,0 +1,77 @@
+/* SHORTCODE: PRICING TOGGLE
+-------------------------------------------- */
+
+.vlt-pricing-toggle {
+
+	.toggle,
+	.toggler {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.toggle {
+		margin: 0 30px;
+	}
+
+	.toggler {
+		margin-bottom: 0;
+		transition: all 300ms ease-in-out;
+		cursor: pointer;
+
+		&--is-active {
+			color: map-get($colors, 'p1');
+		}
+
+	}
+
+	span {
+		display: block;
+	}
+
+	.toggle {
+		position: relative;
+		width: 80px;
+		height: 35px;
+		border-radius: 100px;
+		background-color: map-get($colors, 'c2');
+		overflow: hidden;
+	}
+
+	input[type="checkbox"] {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		cursor: pointer;
+		z-index: 6;
+
+		&:checked ~ .switch {
+			right: 2px;
+			left: 57.5%;
+			transition-property: left, right;
+			transition-duration: 300ms;
+			transition-delay: .08s, 0s;
+			transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		}
+
+	}
+
+	.switch {
+		position: absolute;
+		left: 2px;
+		top: 2px;
+		bottom: 2px;
+		right: 57.5%;
+		background-color: map-get($colors, 'p1');
+		border-radius: 36px;
+		transition-property: left, right;
+		transition-duration: 300ms;
+		transition-delay: 0s, .08s;
+		transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+		z-index: 1;
+	}
+
+}

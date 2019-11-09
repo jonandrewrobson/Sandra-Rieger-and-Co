@@ -1,0 +1,25 @@
+/* WIDGET: PAGES
+-------------------------------------------- */
+
+.vlt-widget.widget_pages {
+	@extend .vlt-widget.widget_categories;
+
+	.sf-with-ul::after {
+		content: '+';
+		padding-left: 5px;
+	}
+
+
+	.sfHover > .sf-with-ul::after {
+		content: '-';
+	}
+
+	ul.children {
+		display: none;
+	}
+
+}
+
+.vlt-widget.vlt-widget--white.widget_pages {
+	@extend .vlt-widget.vlt-widget--white.widget_categories;
+}

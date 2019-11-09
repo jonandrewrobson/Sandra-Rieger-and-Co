@@ -1,0 +1,59 @@
+%vlt_display_1 {
+	font-family: map-get($fonts,'pf');
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.45;
+	letter-spacing: 0.075em;
+	text-transform: uppercase;
+}
+
+%social_icon_hover {
+
+	&:hover {
+		animation: vlt_bounce .8s ease-in-out forwards;
+	}
+
+}
+
+%btn_effect {
+	overflow: hidden;
+
+	&:disabled,
+	&.disabled {
+
+		&::after {
+			display: none;
+		}
+
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		transition: all 300ms ease-in-out;
+		z-index: 0;
+	}
+
+	span {
+		display: block;
+		position: relative;
+		z-index: 1;
+	}
+
+	&:hover {
+
+		span {
+			animation: vlt_btn_effect 300ms ease-in-out forwards;
+		}
+
+		&::after {
+			height: 100%;
+		}
+
+	}
+
+}

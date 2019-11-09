@@ -1,0 +1,137 @@
+/* LAYOUT: PAGINATION
+-------------------------------------------- */
+
+.vlt-pagination {
+	display: block;
+	width: 100%;
+	margin-top: 70px;
+	font-family: map-get($fonts, 'pf');
+	text-align: center;
+}
+
+/* PAGED
+-------------------------------------------- */
+
+.vlt-pagination--paged {
+
+	.prev,
+	.next {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 50px;
+		width: 50px;
+		margin: 0 5px;
+		font-size: 20px;
+		line-height: 1;
+		color: map-get($colors, 'p1');
+		border: 2px solid map-get($colors, 'p1');
+		overflow: hidden;
+
+		span {
+			display: block;
+			position: relative;
+		}
+
+	}
+
+	.prev,
+	.next {
+		overflow: hidden;
+
+		&:hover {
+			color: map-get($colors, 'c0');
+			background-color: map-get($colors, 'p1');
+		}
+
+	}
+
+	.prev:hover span {
+		animation: vlt_animate_icon_left 300ms linear forwards;
+	}
+
+	.next:hover span {
+		animation: vlt_animate_icon_right 300ms linear forwards;
+	}
+
+}
+
+/* NUMERIC
+-------------------------------------------- */
+
+.vlt-pagination--numeric {
+
+	ul {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	li {
+		float: left;
+	}
+
+	li > a,
+	li > span {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 50px;
+		width: 50px;
+		margin: 0 5px;
+		line-height: 1;
+		color: map-get($colors, 'p1');
+		border: 2px solid map-get($colors, 'p1');
+		overflow: hidden;
+
+		&.prev,
+		&.next {
+			font-size: 20px;
+		}
+
+		&.current,
+		&:not(.current):hover {
+			color: map-get($colors, 'c0');
+			background-color: map-get($colors, 'p1');
+		}
+
+		&.prev:hover span {
+			animation: vlt_animate_icon_left 300ms linear forwards;
+		}
+
+		&.next:hover span {
+			animation: vlt_animate_icon_right 300ms linear forwards;
+		}
+
+	}
+
+}
+
+/* AJAX LOAD MORE
+-------------------------------------------- */
+
+.vlt-pagination--load-more {
+
+	.vlt-btn {
+
+		i {
+			margin-left: 0;
+			margin-right: 15px;
+		}
+
+		&:not(.loading) i {
+			display: none;
+		}
+
+	}
+
+	a.disabled {
+		color: map-get($colors, 'c18');
+		opacity: .8;
+		background-color: map-get($colors, 'c5');
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+
+}

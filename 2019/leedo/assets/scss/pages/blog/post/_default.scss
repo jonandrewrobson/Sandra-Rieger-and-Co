@@ -1,0 +1,40 @@
+/* POST: DEFAULT
+-------------------------------------------- */
+
+.vlt-post--style-default {
+
+	.vlt-post-thumbnail + .vlt-post-content,
+	.vp-portfolio__item-img-wrap + .vlt-post-content {
+		padding-top: 30px;
+	}
+
+	.vlt-post-content {
+
+		.vlt-post-header {
+
+			.vlt-post-title {
+				font-size: 30px;
+			}
+
+			.vlt-post-meta {
+				margin-top: 15px;
+			}
+
+		}
+
+		.vlt-post-excerpt {
+			margin-top: 20px;
+
+			&:empty {
+				display: none;
+			}
+
+		}
+
+		.vlt-post-footer {
+			margin-top: 30px;
+		}
+
+	}
+
+}

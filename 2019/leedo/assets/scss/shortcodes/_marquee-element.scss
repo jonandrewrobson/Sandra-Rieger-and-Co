@@ -1,0 +1,36 @@
+/* SHORTCODE: MARQUEUE ELEMENT
+-------------------------------------------- */
+
+.vlt-marquee {
+	display: flex;
+	position: relative;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	user-select: none;
+}
+
+.vlt-marquee__item {
+	display: inline-flex;
+	flex-shrink: 0;
+	position: relative;
+	width: 100%;
+	z-index: 2;
+
+	img {
+		position: relative;
+		object-fit: cover;
+		font-family: 'object-fit: cover;';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+}
+
+.vlt-marquee__item--copy {
+	position: absolute;
+	top: 0;
+	left: 0;
+}

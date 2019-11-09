@@ -1,0 +1,61 @@
+/* WIDGET: RSS
+-------------------------------------------- */
+
+.vlt-widget.widget_rss {
+
+	.vlt-widget__title {
+
+		img {
+			margin-right: 3px;
+			filter: grayscale(100%);
+		}
+
+	}
+
+	li {
+
+		.rss-date {
+			@extend .vlt-display-1;
+			display: block;
+			margin: 15px 0;
+			color: map-get($colors, 'p1');
+		}
+
+		cite {
+			margin: 15px 0 0;
+		}
+
+		.rsswidget {
+			display: block;
+			font-family: map-get($fonts, 'pf');
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 1.4;
+			color: map-get($colors, 'c36');
+
+			&:hover {
+				color: map-get($colors, 'p1');
+			}
+
+		}
+
+	}
+
+	li + li {
+		margin-top: 30px;
+	}
+
+}
+
+.vlt-widget.widget_rss.vlt-widget--white {
+
+	li .rsswidget {
+		color: map-get($colors, 'c0');
+
+		&:hover {
+			color: map-get($colors, 'p1');
+		}
+
+	}
+
+}

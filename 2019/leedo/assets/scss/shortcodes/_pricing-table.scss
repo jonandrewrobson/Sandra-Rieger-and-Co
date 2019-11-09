@@ -1,0 +1,120 @@
+/* SHORTCODE: PRICING TABLE
+-------------------------------------------- */
+
+.vlt-pricing-table {
+	padding: 50px 30px;
+	text-align: center;
+	border: 4px solid map-get($colors, 'c5');
+	background-color: map-get($colors, 'c0');
+
+	&__header {
+
+		h4 {
+			margin: 0;
+			font-size: 24px;
+			line-height: 1;
+
+			@include lowercase {
+				text-transform: lowercase;
+			}
+
+		}
+
+		em {
+			display: block;
+			margin-top: 8px;
+			font-size: 16px;
+		}
+
+	}
+
+	&__price {
+		display: block;
+		padding: 35px 0;
+		font-family: map-get($fonts, 'pf');
+		line-height: 1;
+		color: map-get($colors, 'c36');
+
+		> span {
+			display: inline-block;
+		}
+
+		.currency {
+			margin-top: 5px;
+			margin-right: 10px;
+			vertical-align: top;
+			font-size: 36px;
+			font-weight: 600;
+		}
+
+		.amount {
+			font-size: 80px;
+			font-weight: 700;
+
+			&::before {
+				content: attr(data-amount-annually);
+				display: none;
+			}
+
+		}
+
+		.period {
+			display: block;
+			margin-top: -2px;
+			margin-left: 20px;
+
+			&::before {
+				content: attr(data-period-annually);
+				display: none;
+			}
+
+		}
+
+	}
+
+	&--featured {
+		border-color: map-get($colors, 'p1');
+		background-color: map-get($colors, 'p1');
+		color: map-get($colors, 'c0');
+
+		.vlt-pricing-table__header {
+
+			h4 {
+				color: map-get($colors, 'c0');
+
+				@include lowercase {
+					text-transform: lowercase;
+				}
+
+			}
+
+			em {
+				opacity: .9;
+			}
+
+		}
+
+		.vlt-pricing-table__price {
+			color: map-get($colors, 'c0');
+		}
+
+	}
+
+}
+
+.vlt-pricing-table--is-annually {
+
+	.amount,
+	.period {
+
+		&::before {
+			display: block;
+		}
+
+		> span {
+			display: none;
+		}
+
+	}
+
+}

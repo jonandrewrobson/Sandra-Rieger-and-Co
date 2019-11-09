@@ -1,0 +1,144 @@
+@keyframes vlt_blink_in {
+	0% {
+		opacity: 0;
+		transform: scale(.95);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes vlt_fade_in_down {
+	0% {
+		transform: translate3d(0, -100%, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes vlt_fade_out_up {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(0, -100%, 0);
+	}
+}
+
+@keyframes vlt_fade_in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes vlt_bounce {
+	0%, 20%, 53%, 80%, 100% {
+		transform: translate3d(0, 0, 0);
+		transition-timing-function: cubic-bezier(.215, .610, .355, 1.000);
+	}
+	40% {
+		transform: translate3d(0, -6px, 0);
+		transition-timing-function: cubic-bezier(.755, .050, .855, .060);
+	}
+	70% {
+		transform: translate3d(0, -4px, 0);
+		transition-timing-function: cubic-bezier(.755, .050, .855, .060);
+	}
+	90% {
+		transform: translate3d(0, -2px, 0);
+	}
+}
+
+@keyframes vlt_btn_effect {
+	49% {
+		transform: translate3d(0, -100%, 0);
+	}
+	50% {
+		opacity: 0;
+		transform: translate3d(0, 100%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes vlt_animate_icon_right {
+	49% {
+		transform: translateX(100%);
+	}
+	50% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+
+@keyframes vlt_animate_icon_left {
+	49% {
+		transform: translateX(-100%);
+	}
+	50% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+
+@keyframes vlt_preloader_cube {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes vlt_preloader_signal {
+	0% {
+		transform: scaleY(1);
+	}
+	80% {
+		transform: scaleY(.3);
+	}
+	90% {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes vlt_preloader_spinner {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes vlt_underline_link {
+	0% {
+		transform: scaleX(1);
+		transform-origin: top right;
+	}
+	50% {
+		transform: scaleX(0);
+		transform-origin: top right;
+	}
+	50.1% {
+		transform: scaleX(0);
+		transform-origin: top left;
+	}
+	100% {
+		transform: scaleX(1);
+		transform-origin: top left;
+	}
+}

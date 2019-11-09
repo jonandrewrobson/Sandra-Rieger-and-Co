@@ -1,0 +1,36 @@
+/* FOOTER: WIDGETIZED
+-------------------------------------------- */
+
+.vlt-footer--widgetized {
+	padding: 120px 0;
+
+	.vlt-footer-widgets {
+
+		@include mq('large') {
+
+			> .row > div > div {
+				margin-top: 50px;
+			}
+
+			> .row > div:first-child > div {
+				margin-top: 0;
+			}
+
+		}
+
+	}
+
+	.vlt-footer-copyright {
+		margin: 0;
+	}
+
+	.vlt-footer-widgets + .vlt-footer-copyright {
+		margin-top: 10px;
+
+		@include mq('large') {
+			margin-top: 50px;
+		}
+
+	}
+
+}

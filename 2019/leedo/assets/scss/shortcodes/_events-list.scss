@@ -1,0 +1,65 @@
+/* SHORTCODE: EVENTS LIST
+-------------------------------------------- */
+
+.vlt-event-item {
+	padding-bottom: 35px;
+	border-bottom: 1px solid map-get($colors, 'c31');
+
+	&__date {
+		display: grid;
+		grid-template-columns: 115px auto;
+		align-items: center;
+		color: map-get($colors, 'c0');
+
+		strong {
+			font-family: map-get($fonts, 'pf');
+			font-size: 72px;
+			line-height: 1;
+		}
+
+		span {
+			display: block;
+			font-size: 16px;
+		}
+
+	}
+
+	&__title {
+
+		@include mq('medium') {
+			margin-top: 15px;
+		}
+
+		h4 {
+			margin: 0;
+			color: map-get($colors, 'c0');
+		}
+
+	}
+
+	&__action {
+		text-align: right;
+		color: map-get($colors, 'c0');
+
+		@include mq('medium') {
+			margin-top: 25px;
+			text-align: left;
+		}
+
+		span.sold-out {
+			display: inline-block;
+			font-family: map-get($fonts, 'pf');
+			font-size: 16px;
+			font-weight: 700;
+			text-transform: uppercase;
+
+			@include mq('medium', min) {
+				padding: 0 30px;
+				transform: rotate(20deg);
+			}
+
+		}
+
+	}
+
+}

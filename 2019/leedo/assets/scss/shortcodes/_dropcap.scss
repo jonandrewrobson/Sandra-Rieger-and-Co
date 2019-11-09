@@ -1,0 +1,12 @@
+/* SHORTCODE: DROPCAP
+-------------------------------------------- */
+
+p.has-drop-cap {
+
+	&:not(:focus):first-letter {
+		font-family: map-get($fonts, 'pf');
+		font-weight: 700;
+		color: map-get($colors, 'p1');
+	}
+
+}

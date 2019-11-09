@@ -1,0 +1,196 @@
+/* LAYOUT: FOOTER
+-------------------------------------------- */
+
+.vlt-footer {
+	width: 100%;
+	color: map-get($colors, 'c12');
+}
+
+/* FIXED EFFECT
+-------------------------------------------- */
+
+@include mq('medium', min) {
+
+	.vlt-footer--fixed {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		z-index: z('footer-fixed');
+	}
+
+	.vlt-is--footer-fixed {
+
+		.vlt-site-wrapper__inner {
+			position: relative;
+			background-color: map-get($colors, 'c0');
+			box-shadow: 0 15px 30px rgba(map-get($colors, 'c0'), .1);
+			z-index: z('footer-fixed-content');
+		}
+
+	}
+
+}
+
+@include mq('medium') {
+
+	.vlt-site-wrapper__inner {
+		margin-bottom: 0 !important;
+	}
+
+}
+
+/* FOOTER LOGO
+-------------------------------------------- */
+
+.vlt-footer-logo {
+	display: inline-block;
+	line-height: 1;
+
+	h2 {
+		margin: 0;
+		font-size: 62px;
+		line-height: 1;
+		font-weight: 600;
+		color: map-get($colors, 'c0');
+	}
+
+	img {
+		display: block;
+		max-width: none;
+	}
+
+}
+
+/* FOOTER COPYRIGHT
+-------------------------------------------- */
+
+.vlt-footer-copyright {
+	font-size: 16px;
+	color: map-get($colors, 'c18');
+
+	p {
+		margin-bottom: 0;
+	}
+
+}
+
+/* FOOTER SOCIALS
+-------------------------------------------- */
+
+.vlt-footer-socials {
+
+	a {
+		color: map-get($colors, 'p2');
+	}
+
+	&--style-2 {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			display: inline-flex;
+			margin: 0 4px;
+
+			@include mq('medium') {
+				margin: 5px 8px 0;
+			}
+
+		}
+
+		@include mq('medium', min) {
+
+			li + li {
+
+				&::before {
+					content: '-';
+					padding-right: 8px;
+
+				}
+
+			}
+
+		}
+
+		a {
+			color: map-get($colors, 'c0');
+
+			&:hover {
+				color: map-get($colors, 'p1');
+			}
+
+		}
+
+	}
+
+}
+
+/* FOOTER CONTENT
+-------------------------------------------- */
+
+.vlt-footer-content {
+	font-family: map-get($fonts, 'pf');
+
+	p {
+		margin-bottom: 0;
+	}
+
+	a {
+		display: inline-flex;
+		position: relative;
+		font-size: 60px;
+		line-height: 1.2;
+		font-weight: 700;
+		color: map-get($colors, 'c0');
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background-color: currentColor;
+		}
+
+		&:hover::before {
+			animation: vlt_underline_link 1s ease-in-out forwards;
+		}
+
+		@include mq('medium') {
+			font-size: 48px;
+		}
+
+		@include mq('small') {
+			font-size: 34px;
+		}
+
+	}
+
+	&--style-2 {
+
+		a {
+			font-size: 48px;
+
+			@include mq('small') {
+				font-size: 34px;
+			}
+
+		}
+
+	}
+
+}
+
+// import
+
+@import
+	'footer/style-1',
+	'footer/style-2',
+	'footer/style-3',
+	'footer/style-4',
+	'footer/style-5',
+	'footer/style-6',
+	'footer/style-7',
+	'footer/widgetized';

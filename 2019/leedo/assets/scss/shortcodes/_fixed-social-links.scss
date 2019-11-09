@@ -1,0 +1,87 @@
+/* SHORTCODE: FIXED SOCIAL LINKS
+-------------------------------------------- */
+
+.vlt-fixed-social-links {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style-type: none;
+	transform: translate3d(0, -50%, 0);
+	z-index: z('fixed-social-links');
+
+	@include mq('medium') {
+		display: none;
+	}
+
+	li {
+		will-change: transform;
+		transition: transform 300ms linear;
+	}
+
+	&.is-visible li {
+
+		@for $i from 1 to 8 {
+
+			&:nth-child(#{$i}) {
+				transform: translate3d(0, 0, 0);
+				transition-delay: $i * 50ms;
+			}
+
+		}
+
+	}
+
+	&.is-hidden li {
+
+		@for $i from 1 to 8 {
+
+			&:nth-child(#{$i}) {
+				transform: translate3d(-100%, 0, 0);
+				transition-delay: $i * 50ms;
+			}
+
+		}
+
+	}
+
+}
+
+/* STYLE 1
+-------------------------------------------- */
+
+.vlt-fixed-social-links--style-1 {
+
+	a {
+		@extend .vlt-social-icon--style-1;
+		border-radius: 0;
+
+		&:hover {
+			width: 60px;
+		}
+
+	}
+
+}
+
+/* STYLE 2
+-------------------------------------------- */
+
+.vlt-fixed-social-links--style-2 {
+
+	li {
+		padding-left: 10px;
+	}
+
+	li + li {
+		margin-top: 10px;
+	}
+
+	a {
+		@extend .vlt-social-icon--style-1;
+	}
+
+}

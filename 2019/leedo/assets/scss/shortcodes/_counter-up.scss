@@ -1,0 +1,119 @@
+/* SHORTCODE: COUNTER UP
+-------------------------------------------- */
+
+/* STYLE 1
+-------------------------------------------- */
+
+.vlt-counter-up--style-1 {
+
+	.vlt-counter-up__icon {
+		float: left;
+		margin-right: 15px;
+		font-size: 55px;
+		line-height: 1;
+		color: map-get($colors, 'p2');
+	}
+
+	.vlt-counter-up__content {
+		padding-left: 90px;
+
+		strong {
+			font-family: map-get($fonts, 'pf');
+			font-size: 48px;
+			line-height: 1;
+			color: map-get($colors, 'p3');
+		}
+
+		h4 {
+			margin: 2px 0 0;
+			font-size: 24px;
+		}
+
+	}
+
+}
+
+/* STYLE 2
+-------------------------------------------- */
+
+.vlt-counter-up--style-2 {
+
+	.vlt-counter-up__content {
+
+		strong {
+			font-family: map-get($fonts, 'pf');
+			font-size: 36px;
+			line-height: 1;
+			color: map-get($colors, 'p3');
+		}
+
+		h4 {
+			margin: 2px 0 0;
+		}
+
+	}
+
+}
+
+/* STYLE 3
+-------------------------------------------- */
+
+.vlt-counter-up--style-3 {
+	text-align: center;
+
+	.vlt-counter-up__icon {
+		margin-bottom: 20px;
+		font-size: 55px;
+		line-height: 1;
+		color: map-get($colors, 'p2');
+	}
+
+	.vlt-counter-up__content {
+
+		strong {
+			font-family: map-get($fonts, 'pf');
+			font-size: 48px;
+			line-height: 1;
+			color: map-get($colors, 'p3');
+		}
+
+		h4 {
+			margin: 2px 0 0;
+			font-size: 24px;
+
+			@include lowercase {
+				text-transform: lowercase;
+			}
+
+		}
+
+	}
+
+}
+
+/* STYLE 4
+-------------------------------------------- */
+
+.vlt-counter-up--style-4 {
+
+	.vlt-counter-up__content {
+
+		strong {
+			font-family: map-get($fonts, 'pf');
+			font-size: 58px;
+			line-height: 1;
+			color: map-get($colors, 'p1');
+
+			@include mq('medium') {
+				font-size: 48px;
+			}
+
+		}
+
+		h4 {
+			margin: 5px 0 0;
+		}
+
+	}
+
+}

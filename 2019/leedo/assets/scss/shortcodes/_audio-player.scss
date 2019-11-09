@@ -1,0 +1,152 @@
+/* SHORTCODE: AUDIO PLAYER
+-------------------------------------------- */
+
+.vlt-audio-player {
+	position: relative;
+	padding: 10px 40px 10px 10px;
+	background-color: map-get($colors, 'c34');
+
+	.vlt-audio-player__metas {
+
+		h5 {
+			margin: 0;
+			font-size: 16px;
+			color: map-get($colors, 'c0');
+		}
+
+		span {
+			display: block;
+			font-size: 15px;
+			color: map-get($colors, 'c18');
+		}
+
+	}
+
+	.vlt-audio-player__button {
+		margin-right: 35px;
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 60px;
+			width: 60px;
+			font-size: 18px;
+			color: map-get($colors, 'c0');
+			background-color: map-get($colors, 'p1');
+		}
+
+	}
+
+	.vlt-audio-player__mejs {
+		flex-shrink: 0;
+		width: 100%;
+
+		@include mq('medium') {
+			margin-top: 10px;
+		}
+
+		@include mq('medium', min) {
+			padding-left: 10px;
+		}
+
+		@include mq('small') {
+			display: none;
+		}
+
+		.mejs-container * {
+			outline: none !important;
+		}
+
+		.mejs-container,
+		.mejs-embed,
+		.mejs-embed body,
+		.mejs-container .mejs-controls {
+			background: none;
+		}
+
+		.mejs-time-rail {
+			padding-top: 14px;
+		}
+
+		.mejs-controls .mejs-time-rail span {
+			height: 3px;
+		}
+
+		.mejs-time-handle-content {
+			display: none;
+		}
+
+		.mejs-time-float {
+			height: 17px !important;
+		}
+
+		.mejs-controls .mejs-time-rail .mejs-time-total,
+		.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+		.mejs-controls .mejs-time-rail .mejs-time-loaded {
+			background-color: map-get($colors, 'c28');
+		}
+
+		.mejs-controls .mejs-time-rail .mejs-time-current,
+		.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+			background-color: map-get($colors, 'p1');
+		}
+
+		.mejs-time {
+			font-family: map-get($fonts, 'sf');
+			color: map-get($colors, 'c18');
+			font-size: 14px;
+		}
+
+		.mejs-container {
+			width: 100% !important;
+			min-width: 450px !important;
+
+			.mejs-controls {
+				padding: 0;
+
+				.mejs-playpause-button {
+					display: none;
+				}
+
+			}
+
+		}
+
+		// volume
+
+		.mejs-button {
+			margin-left: 45px;
+		}
+
+		.mejs-horizontal-volume-slider {
+			height: 3px;
+			width: 70px;
+		}
+
+		.mejs-horizontal-volume-total {
+			top: 18px;
+			height: 100%;
+			width: 100%;
+		}
+
+		.mejs-mute > button,
+		.mejs-unmute > button {
+			font-size: 18px;
+			color: map-get($colors, 'c0');
+			background: none;
+
+			&::before {
+				content: '\e90a';
+				font-family: map-get($fonts, 'lf');
+			}
+
+		}
+
+		.mejs-unmute > button {
+			opacity: 0.5;
+		}
+
+	}
+
+}

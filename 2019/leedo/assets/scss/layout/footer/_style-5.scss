@@ -1,0 +1,19 @@
+/* FOOTER: STYLE 5
+-------------------------------------------- */
+
+.vlt-footer--style-5 {
+	@extend .vlt-footer--style-2;
+
+	.vlt-footer-content {
+
+		a {
+			color: map-get($colors, 'p3');
+		}
+
+	}
+
+	.vlt-footer-socials + .vlt-footer-copyright {
+		margin-top: 20px;
+	}
+
+}

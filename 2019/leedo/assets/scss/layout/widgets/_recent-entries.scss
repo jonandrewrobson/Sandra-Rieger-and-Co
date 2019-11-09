@@ -1,0 +1,10 @@
+/* WIDGET: RECENT ENTRIES
+-------------------------------------------- */
+
+.vlt-widget.widget_recent_entries {
+	@extend .vlt-widget.widget_categories;
+}
+
+.vlt-widget.vlt-widget--white.widget_recent_entries {
+	@extend .vlt-widget.vlt-widget--white.widget_categories;
+}

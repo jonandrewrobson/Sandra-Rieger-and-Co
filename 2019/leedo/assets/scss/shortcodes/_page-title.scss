@@ -1,0 +1,45 @@
+/* SHORTCODE: PAGE TITLE
+-------------------------------------------- */
+
+.vlt-page-title {
+	padding: 70px 0;
+	background-color: map-get($colors, 'c1');
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include mq('medium') {
+			display: block;
+		}
+
+	}
+
+	h1 {
+		margin: 0;
+		font-size: 38px;
+		line-height: 1.2;
+	}
+
+	.vlt-breadcrumbs,
+	.vlt-woocommerce-breadcrumbs {
+		font-family: map-get($fonts, 'pf');
+		font-style: italic;
+		font-size: 16px;
+
+		@include mq('medium') {
+			margin-top: 10px;
+		}
+
+	}
+
+	.vlt-woocommerce-breadcrumbs {
+
+		.sep {
+			margin: 0 5px;
+		}
+
+	}
+
+}

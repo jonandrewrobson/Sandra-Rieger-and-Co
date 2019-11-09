@@ -1,0 +1,39 @@
+/* POST: MASONRY
+-------------------------------------------- */
+
+.vlt-post--style-masonry {
+
+	.vlt-post-thumbnail + .vlt-post-content,
+	.vp-portfolio__item-img-wrap + .vlt-post-content {
+		padding-top: 30px;
+	}
+
+	.vlt-post-content {
+
+		&.vlt-post-content--padding {
+			padding: 25px 35px;
+		}
+
+		&.vlt-post-content--background {
+			background-color: map-get($colors, 'c1');
+		}
+
+		.vlt-post-header {
+
+			.vlt-post-title {
+				font-size: 24px;
+			}
+
+			.vlt-post-meta {
+				margin-top: 15px;
+			}
+
+		}
+
+		.vlt-post-excerpt {
+			margin-top: 20px;
+		}
+
+	}
+
+}

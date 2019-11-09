@@ -1,0 +1,306 @@
+/* PARTIAL: SOCIAL ICONS
+-------------------------------------------- */
+
+.vlt-social-icon {
+	@extend %social_icon_hover;
+}
+
+/* STYLE 1
+-------------------------------------------- */
+
+.vlt-social-icon--style-1 {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	width: 50px;
+	margin: 0 15px 0 0;
+	font-size: 20px;
+	color: map-get($colors, 'c0');
+	border-radius: 50px;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+	&:hover {
+		color: map-get($colors, 'c0');
+	}
+
+	&.twitter {
+		background-color: $twitter;
+	}
+
+	&.dribbble {
+		background-color: $dribbble;
+	}
+
+	&.facebook,
+	&.facebook-f {
+		background-color: $facebook;
+	}
+
+	&.google-plus {
+		background-color: $google_plus;
+	}
+
+	&.linkedin,
+	&.linkedin-in {
+		background-color: $linkedin;
+	}
+
+	&.pinterest {
+		background-color: $pinterest;
+	}
+
+	&.instagram {
+		background-color: $instagram;
+	}
+
+	&.youtube {
+		background-color: $youtube;
+	}
+
+	&.flickr {
+		background-color: $flickr;
+	}
+
+	&.tumblr {
+		background-color: $tumblr;
+	}
+
+	&.vine {
+		background-color: $vine;
+	}
+
+	&.vk {
+		background-color: $vk;
+	}
+
+	&.deviantart {
+		background-color: $deviantart;
+	}
+
+	&.skype {
+		background-color: $skype;
+	}
+
+	&.vimeo {
+		background-color: $vimeo;
+	}
+
+	&.digg {
+		background-color: $digg;
+	}
+
+	&.soundcloud {
+		background-color: $soundcloud;
+	}
+
+	&.github {
+		background-color: $github;
+	}
+
+	&.spotify {
+		background-color: $spotify;
+	}
+
+	&.behance {
+		background-color: $behance;
+	}
+
+}
+
+/* STYLE 2
+-------------------------------------------- */
+
+.vlt-social-icon--style-2 {
+	display: inline-flex;
+	margin: 0 18px 0 0;
+	font-size: 20px;
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+}
+
+/* STYLE 3
+-------------------------------------------- */
+
+.vlt-social-icon--style-3 {
+	@extend .vlt-social-icon--style-2;
+
+	&.twitter:hover {
+		color: $twitter;
+	}
+
+	&.dribbble:hover {
+		color: $dribbble;
+	}
+
+	&.facebook:hover,
+	&.facebook-f:hover {
+		color: $facebook;
+	}
+
+	&.google-plus:hover {
+		color: $google_plus;
+	}
+
+	&.linkedin:hover,
+	&.linkedin-in:hover {
+		color: $linkedin;
+	}
+
+	&.pinterest:hover {
+		color: $pinterest;
+	}
+
+	&.instagram:hover {
+		color: $instagram;
+	}
+
+	&.youtube:hover {
+		color: $youtube;
+	}
+
+	&.flickr:hover {
+		color: $flickr;
+	}
+
+	&.tumblr:hover {
+		color: $tumblr;
+	}
+
+	&.vine:hover {
+		color: $vine;
+	}
+
+	&.vk:hover {
+		color: $vk;
+	}
+
+	&.deviantart:hover {
+		color: $deviantart;
+	}
+
+	&.skype:hover {
+		color: $skype;
+	}
+
+	&.vimeo:hover {
+		color: $vimeo;
+	}
+
+	&.digg:hover {
+		color: $digg;
+	}
+
+	&.soundcloud:hover {
+		color: $soundcloud;
+	}
+
+	&.github:hover {
+		color: $github;
+	}
+
+	&.spotify:hover {
+		color: $spotify;
+	}
+
+	&.behance:hover {
+		color: $behance;
+	}
+
+}
+
+/* STYLE 4
+-------------------------------------------- */
+
+.vlt-social-icon--style-4 {
+	@extend .vlt-social-icon--style-2;
+
+	&.twitter {
+		color: $twitter;
+	}
+
+	&.dribbble {
+		color: $dribbble;
+	}
+
+	&.facebook,
+	&.facebook-f {
+		color: $facebook;
+	}
+
+	&.google-plus {
+		color: $google_plus;
+	}
+
+	&.linkedin,
+	&.linkedin-in {
+		color: $linkedin;
+	}
+
+	&.pinterest {
+		color: $pinterest;
+	}
+
+	&.instagram {
+		color: $instagram;
+	}
+
+	&.youtube {
+		color: $youtube;
+	}
+
+	&.flickr {
+		color: $flickr;
+	}
+
+	&.tumblr {
+		color: $tumblr;
+	}
+
+	&.vine {
+		color: $vine;
+	}
+
+	&.vk {
+		color: $vk;
+	}
+
+	&.deviantart {
+		color: $deviantart;
+	}
+
+	&.skype {
+		color: $skype;
+	}
+
+	&.vimeo {
+		color: $vimeo;
+	}
+
+	&.digg {
+		color: $digg;
+	}
+
+	&.soundcloud {
+		color: $soundcloud;
+	}
+
+	&.github {
+		color: $github;
+	}
+
+	&.spotify {
+		color: $spotify;
+	}
+
+	&.behance {
+		color: $behance;
+	}
+
+}

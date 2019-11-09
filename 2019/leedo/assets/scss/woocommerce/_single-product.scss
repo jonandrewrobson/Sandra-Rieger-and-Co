@@ -1,0 +1,412 @@
+/* SINGLE PRODUCT
+-------------------------------------------- */
+
+.vlt-product-summary-wrapper {
+	padding: 15px 0 90px;
+
+	// thumbnail
+
+	.vlt-single-product-thumbnail {
+		position: relative;
+
+		.woocommerce-product-gallery {
+			margin-bottom: 0;
+		}
+
+		.flex-control-nav li {
+			cursor: pointer;
+		}
+
+	}
+
+	// summary
+
+	.vlt-single-product-summary {
+		padding: 30px 0;
+
+		@include mq('medium', min) {
+			padding-left: 30px;
+		}
+
+		// breadcrumbs
+
+		.vlt-woocommerce-breadcrumbs {
+			margin-bottom: 25px;
+			font-size: 14px;
+
+			a {
+				color: map-get($colors, 'c36');
+
+				&:hover {
+					color: map-get($colors, 'p1');
+				}
+
+			}
+
+			.sep {
+				margin: 0 3px;
+			}
+
+		}
+
+		// title
+
+		.vlt-product-title {
+			margin: 0 0 15px;
+			font-size: 38px;
+		}
+
+		// stars
+
+		.vlt-woocommerce-product-rating {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			color: map-get($colors, 'c36');
+
+			.vlt-woocommerce-review-link {
+				margin-left: 6px;
+			}
+
+		}
+
+		// stock
+
+		.vlt-stock {
+			margin: 30px 0 0;
+			color: map-get($colors, 'c36');
+		}
+
+		// share
+
+		.vlt-social-share {
+			margin: 40px 0 0;
+		}
+
+		// price
+
+		.vlt-price {
+			margin: 25px 0 0;
+			font-family: map-get($fonts, 'pf');
+			font-weight: 600;
+			font-size: 22px;
+
+			ins,
+			> .amount {
+				color: map-get($colors, 'p1');
+			}
+
+		}
+
+		// short description
+
+		.vlt-woocommerce-product-details__short-description {
+			margin-top: 25px;
+
+			p:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+
+		// meta
+
+		.vlt-product-meta {
+			margin-top: 40px;
+			font-size: 16px;
+			color: map-get($colors, 'c27');
+
+			div + div {
+				margin-top: 5px;
+			}
+
+			.vlt-display-1 {
+				color: map-get($colors, 'c36');
+			}
+
+		}
+
+		// add to cart button
+
+		.vlt-cart {
+			margin-top: 35px;
+
+			.vlt-quantity.hidden {
+				display: none;
+			}
+
+			.vlt-quantity:not(.hidden) + .vlt-btn {
+				margin-left: 40px;
+			}
+
+			.vlt-variations {
+				margin-bottom: 40px;
+
+				td,
+				th {
+					padding: 0;
+					border: none;
+				}
+
+				tr + tr td {
+					padding-top: 15px;
+				}
+
+				label {
+					margin: 0;
+					color: map-get($colors, 'c36');
+				}
+
+				.value {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					select {
+						max-width: 220px;
+						padding: 0;
+						border: none;
+					}
+
+				}
+
+			}
+
+			.vlt-woocommerce-variation-add-to-cart {
+				margin-top: 35px;
+			}
+
+			.vlt-woocommerce-variation-description,
+			.vlt-woocommerce-variation-price,
+			.vlt-woocommerce-variation-availability {
+				margin-top: 15px;
+			}
+
+		}
+
+	}
+
+}
+
+/* TABS
+-------------------------------------------- */
+
+.vlt-woocommerce-tabs {
+	background-color: map-get($colors, 'c2');
+
+	.vlt-tabs {
+		margin: 0;
+		padding: 30px 0 0;
+		text-align: center;
+
+		@include mq('medium', min) {
+			padding: 0;
+			list-style-type: none;
+			border-bottom: 1px solid map-get($colors, 'c9');
+		}
+
+		li {
+			display: block;
+			padding: 5px 15px;
+			font-family: map-get($fonts, 'pf');
+			color: map-get($colors, 'c21');
+
+			@include mq('medium', min) {
+				display: inline-block;
+				margin: 0 20px -1px;
+				padding: 30px 0 28px;
+				border-bottom: 2px solid transparent;
+			}
+
+			a {
+				font-weight: 600;
+			}
+
+			&.active {
+				border-color: map-get($colors, 'p1');
+
+				a {
+					color: map-get($colors, 'p1');
+				}
+
+			}
+
+		}
+
+	}
+
+	.vlt-panel {
+		padding: 60px 0 90px;
+
+		&--description {
+
+			p:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+
+		&--additional_information {
+
+			table {
+				margin: 0;
+
+				th,
+				td {
+					padding: 20px 0;
+					border: none;
+					border-bottom: 1px solid map-get($colors, 'c9');
+				}
+
+				tr:first-child {
+
+					th,
+					td {
+						padding-top: 0;
+					}
+
+				}
+
+				td {
+					text-align: right;
+				}
+
+				p {
+					margin: 0;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/* REVIEWS
+-------------------------------------------- */
+
+.vlt-reviews {
+
+	// form
+
+	.comment-respond {
+		margin-top: 50px;
+
+		h6 {
+			margin: 0 0 40px;
+		}
+
+		label {
+			margin: 0;
+			font-family: map-get($fonts, 'sf');
+			font-size: 16px;
+			color: map-get($colors, 'c22');
+		}
+
+		.stars {
+			display: block;
+			margin: 0 0 0 25px;
+			font-size: 16px;
+			line-height: 1;
+			font-weight: normal;
+
+			a {
+				display: inline-block;
+				position: relative;
+				height: 1em;
+				width: 1em;
+				margin-right: 2px;
+				text-indent: -999em;
+				color: map-get($colors, 'c14');
+
+				&::before {
+					content: '\f005';
+					display: block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 1em;
+					height: 1em;
+					line-height: 1em;
+					font-family: map-get($fonts, 'fa');
+					font-weight: 900;
+					text-indent: 0;
+				}
+
+			}
+
+		}
+
+		.stars a:hover ~ a::before {
+			color: map-get($colors, 'c14');
+		}
+
+		.stars:hover a::before {
+			color: map-get($colors, 'c11');
+		}
+
+		.stars.selected a.active::before {
+			color: map-get($colors, 'c11');
+		}
+
+		.stars.selected a.active ~ a::before {
+			color: map-get($colors, 'c14');
+		}
+
+		.stars.selected a:not(.active)::before {
+			color: map-get($colors, 'c11');
+		}
+
+	}
+
+}
+
+.vlt-reviews__list {
+	@extend .vlt-comments__list;
+
+	li.vlt-review-item {
+		padding: 50px 0;
+		border-bottom: 1px solid map-get($colors, 'c9');
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+	}
+
+}
+
+.vlt-review-item__inner {
+	@extend .vlt-comment-item__inner;
+
+	.vlt-review-avatar {
+		@extend .vlt-comment-avatar;
+	}
+
+	.vlt-review-content {
+		@extend .vlt-comment-content;
+
+		.vlt-review-header {
+			@extend .vlt-comment-header;
+			display: block;
+			position: relative;
+			margin-bottom: 20px;
+
+			.star-rating {
+				position: absolute;
+				top: 5px;
+				right: 0;
+			}
+
+			&__metas {
+				margin-top: 10px;
+				font-size: 14px;
+				color: map-get($colors, 'c21');
+			}
+
+		}
+
+	}
+
+}

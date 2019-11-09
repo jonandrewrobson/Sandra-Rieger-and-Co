@@ -1,0 +1,14 @@
+/* SHORTCODE: WORK META
+-------------------------------------------- */
+
+.vlt-work-meta {
+	margin-bottom: 0;
+	font-size: 16px;
+	color: map-get($colors, 'c36');
+
+	dt {
+		@extend .vlt-display-1;
+		color: map-get($colors, 'c20');
+	}
+
+}

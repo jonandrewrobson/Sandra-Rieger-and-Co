@@ -1,0 +1,29 @@
+/* VENDOR: PHOTOSWIPE
+-------------------------------------------- */
+
+.pswp__bg {
+	background-color: rgba(map-get($colors, 'c0'), .8) !important;
+}
+
+.vp-pswp .pswp__caption,
+.pswp__ui--fit .pswp__top-bar,
+.pswp__ui--fit .pswp__caption {
+	background: none !important;
+
+	> div {
+		color: map-get($colors, 'c0') !important;
+	}
+
+}
+
+.pswp__caption__center {
+	text-align: center !important;
+
+	h3 {
+		font-family: map-get($fonts, 'sf');
+		font-size: 18px;
+		font-weight: normal;
+		color: map-get($colors, 'c0');
+	}
+
+}

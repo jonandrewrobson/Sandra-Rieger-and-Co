@@ -1,0 +1,76 @@
+/* HEADER: SLIDE
+-------------------------------------------- */
+
+.vlt-header--slide {
+
+	.vlt-navbar {
+
+		.vlt-menu-shop-cart,
+		.vlt-menu-search-icon {
+			margin-left: 25px;
+		}
+
+	}
+
+}
+
+.vlt-slide-navigation-holder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 450px;
+	background-color: map-get($colors, 'c35');
+	visibility: hidden;
+	overflow: auto;
+	z-index: z('slide-navigation');
+
+	.vlt-navbar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 0 30px;
+		text-align: right;
+		background-color: transparent;
+		z-index: 3;
+	}
+
+}
+
+// fix admin bar
+@media (min-width: 783px) {
+
+	.admin-bar .vlt-slide-navigation-holder {
+		top: 32px !important;
+	}
+
+}
+
+@media (max-width: 782px) {
+
+	.admin-bar .vlt-slide-navigation-holder {
+		top: 46px !important;
+	}
+
+}
+
+@media (max-width: 600px) {
+
+	.admin-bar .vlt-slide-navigation-holder {
+		top: 0 !important;
+	}
+
+}
+
+/* NAVIGATION
+-------------------------------------------- */
+
+.vlt-slide-navigation {
+	@extend .vlt-fullscreen-navigation;
+	width: 100%;
+}

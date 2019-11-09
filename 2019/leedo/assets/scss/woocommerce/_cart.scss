@@ -1,0 +1,318 @@
+/* CART
+-------------------------------------------- */
+
+.vlt-woocommerce-cart-form {
+
+	table {
+		margin-bottom: 0;
+		font-family: map-get($fonts, 'pf');
+
+		// thead
+		thead {
+			background-color: map-get($colors, 'c2');
+
+			tr th {
+				padding-left: 0;
+				color: map-get($colors, 'c25');
+			}
+
+			.product-thumbnail {
+
+				@include mq('medium') {
+					display: none;
+				}
+
+			}
+
+		}
+
+		td,
+		th {
+			border: none;
+		}
+
+		// tbody
+		tbody {
+
+			td {
+				padding: 30px 0;
+			}
+
+			tr {
+				border-bottom: 1px solid map-get($colors, 'c4');
+			}
+
+			td.product-remove {
+				width: 40px;
+
+				a {
+					font-size: 20px;
+					line-height: 1;
+
+					&:not(:hover) {
+						color: map-get($colors, 'c19');
+					}
+
+				}
+
+			}
+
+			td.product-thumbnail {
+				width: 130px;
+
+				@include mq('medium') {
+					display: none;
+				}
+
+				a,
+				img {
+					display: block;
+				}
+
+				img {
+					max-width: 100px;
+				}
+
+			}
+
+			td.product-name {
+
+				a {
+					font-size: 16px;
+					font-weight: 600;
+
+					&:not(:hover) {
+						color: map-get($colors, 'c36');
+					}
+
+				}
+
+				.star-rating {
+					display: block;
+					margin-top: 5px;
+					font-size: 12px;
+				}
+
+			}
+
+			td.product-price,
+			td.product-subtotal {
+				font-size: 16px;
+				font-weight: 500;
+				color: map-get($colors, 'c36');
+			}
+
+			td.actions {
+
+				> div {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					@include mq('medium') {
+						display: block;
+					}
+
+				}
+
+				.vlt-coupon {
+					display: flex;
+					align-items: center;
+
+					.vlt-btn {
+						flex-shrink: 0;
+					}
+
+					input[type='text'] {
+						max-width: 200px;
+						margin-right: 10px;
+						padding-left: 15px;
+						padding-right: 15px;
+						border-width: 1px;
+
+						@include mq('medium') {
+							max-width: 100%;
+						}
+
+					}
+				}
+
+				button[name='update_cart'] {
+
+					@include mq('medium') {
+						margin-top: 30px;
+					}
+
+				}
+
+				.vlt-btn:disabled {
+					opacity: 0.3;
+				}
+
+			}
+
+		}
+
+	}
+
+	@include mq('medium') {
+		table.cart,
+		#content table.cart {
+
+			td:not(:first-child) {
+				border-top: 1px solid map-get($colors, 'c8');
+			}
+
+			.product-thumbnail {
+				display: none !important;
+			}
+
+			td.product-remove {
+				width: 100% !important;
+			}
+
+			td.actions {
+				text-align: left;
+
+				.coupon {
+					float: none;
+				}
+
+				button[name='update_cart'] {
+					display: block;
+					width: 100%;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/* CART TOTALS
+-------------------------------------------- */
+
+.vlt-cart-collaterals .vlt-cart-totals {
+	margin-top: 70px;
+	padding: 0;
+	border: 1px solid map-get($colors, 'c8');
+
+	h2 {
+		margin: 0;
+		padding: 20px 15px;
+		font-size: 18px;
+		text-align: center;
+		background-color: map-get($colors, 'c2');
+	}
+
+	.vlt-cart-totals-table-wrapper {
+		padding: 0 30px;
+	}
+
+	.vlt-woocommerce-proceed-to-checkout {
+		margin-top: 25px;
+		margin-bottom: 50px;
+
+		.vlt-btn {
+			max-width: 310px;
+			margin: 0 auto;
+		}
+
+	}
+
+	table {
+		margin: 0;
+		font-family: map-get($fonts, 'pf');
+
+		td,
+		th {
+			padding: 25px 0;
+			border: none;
+		}
+
+		tr {
+			border-bottom: 1px solid map-get($colors, 'c8');
+		}
+
+		th {
+			padding-right: 30px;
+			color: map-get($colors, 'c26');
+		}
+
+		td {
+			text-align: right;
+		}
+
+		tr.cart-subtotal {
+			font-size: 16px;
+			font-weight: 500;
+			color: map-get($colors, 'c36');
+		}
+
+		tr.order-total {
+			padding: 15px 0;
+			font-size: 24px;
+			font-weight: 600;
+			color: map-get($colors, 'c36');
+		}
+
+		tr.cart-discount {
+			font-size: 16px;
+			color: map-get($colors, 'c36');
+		}
+
+		tr.shipping {
+			font-size: 16px;
+			color: map-get($colors, 'c36');
+
+			th {
+				vertical-align: top;
+			}
+
+			.woocommerce-shipping-methods {
+				list-style-type: none;
+			}
+
+			.woocommerce-shipping-calculator {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+
+				> * {
+					max-width: 260px;
+				}
+
+				p {
+					margin-bottom: 0;
+				}
+
+				.shipping-calculator-form {
+					padding-top: 30px;
+					text-align: left;
+
+					p {
+						margin: 0 0 20px;
+					}
+
+					input,
+					select {
+						padding: 10px 15px;
+						border-width: 1px;
+						border-color: map-get($colors, 'c8');
+					}
+
+					select {
+						background-position: right 15px bottom 50%;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

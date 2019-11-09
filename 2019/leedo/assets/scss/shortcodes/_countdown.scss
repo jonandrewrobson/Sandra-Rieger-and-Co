@@ -1,0 +1,58 @@
+/* SHORTCODE: COUNTDOWN
+-------------------------------------------- */
+
+.vlt-countdown {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 30px;
+	text-align: center;
+
+	@include mq('medium') {
+		grid-template-columns: repeat(2, 1fr)
+	}
+
+	strong {
+		display: block;
+		font-family: map-get($fonts, 'pf');
+		font-weight: 700;
+		line-height: 1;
+		color: map-get($colors, 'p3');
+	}
+
+	h5 {
+		margin: 10px 0 0;
+	}
+
+}
+
+/* STYLE 1
+-------------------------------------------- */
+
+.vlt-countdown--style-1 {
+
+	strong {
+		font-size: 70px;
+	}
+
+	h5 {
+		@extend %vlt_display_1;
+	}
+
+}
+
+/* STYLE 2
+-------------------------------------------- */
+
+.vlt-countdown--style-2 {
+
+	strong {
+		font-size: 105px;
+	}
+
+	h5 {
+		@extend %vlt_display_1;
+		font-size: 16px !important;
+		color: map-get($colors, 'c18');
+	}
+
+}

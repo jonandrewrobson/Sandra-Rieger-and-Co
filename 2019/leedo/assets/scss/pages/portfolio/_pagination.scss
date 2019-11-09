@@ -1,0 +1,125 @@
+/* PORTFOLIO: PAGINATION
+-------------------------------------------- */
+
+.vp-portfolio__pagination-wrap {
+	overflow: auto !important;
+}
+
+.vp-pagination__style-leedo {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 70px;
+	padding: 0;
+	list-style-type: none;
+
+	.vp-pagination__item a {
+		text-decoration: none;
+		box-shadow: none;
+		outline: none;
+	}
+
+	&.vp-pagination__align-left {
+		justify-content: flex-start;
+	}
+
+	&.vp-pagination__align-right {
+		justify-content: flex-end;
+	}
+
+	.vp-pagination__item {
+		flex: 0 0 auto;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		text-align: center;
+	}
+
+	&[data-vp-pagination-type='load-more'],
+	&[data-vp-pagination-type='infinite'] {
+
+		.vp-pagination__item {
+			display: block;
+			flex: auto;
+			margin: 0;
+		}
+
+		.vp-pagination__item a i {
+			margin-right: 15px;
+			margin-left: 0;
+		}
+
+		&.vp-pagination__no-more .vp-pagination__item a {
+			pointer-events: none;
+			cursor: not-allowed;
+		}
+
+	}
+
+	&[data-vp-pagination-type='paged'] {
+		font-family: map-get($fonts, 'pf');
+
+		.vp-pagination__item {
+			overflow: hidden;
+
+			> a,
+			> span {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				height: 50px;
+				width: 50px;
+				margin: 0 5px;
+				line-height: 1;
+				color: map-get($colors, 'p1');
+				border: 2px solid map-get($colors, 'p1');
+				overflow: hidden;
+			}
+
+			&.vp-pagination__item-active > span,
+			&:not(.vp-pagination__item-active) a:hover {
+				color: map-get($colors, 'c0');
+				background-color: map-get($colors, 'p1');
+			}
+
+			&.vp-pagination__item-prev,
+			&.vp-pagination__item-next {
+				font-size: 20px;
+			}
+
+			&.vp-pagination__item-prev:hover {
+
+				span {
+					animation: vlt_animate_icon_left 300ms linear forwards;
+				}
+
+			}
+
+			&.vp-pagination__item-next:hover {
+
+				span {
+					animation: vlt_animate_icon_right 300ms linear forwards;
+				}
+
+			}
+
+		}
+
+	}
+
+	// show/hide labels
+	.vp-pagination__load-more .vp-pagination__load-more-no-more,
+	.vp-pagination__load-more .vp-pagination__load-more-loading,
+	.vp-portfolio__loading & .vp-pagination__load-more span,
+	&.vp-pagination__no-more .vp-pagination__load-more span,
+	.vp-portfolio__loading &.vp-pagination__no-more .vp-pagination__load-more .vp-pagination__load-more-no-more {
+		display: none;
+	}
+
+	.vp-pagination__load-more span,
+	.vp-portfolio__loading & .vp-pagination__load-more .vp-pagination__load-more-loading,
+	&.vp-pagination__no-more .vp-pagination__load-more .vp-pagination__load-more-no-more {
+		display: block;
+	}
+
+}

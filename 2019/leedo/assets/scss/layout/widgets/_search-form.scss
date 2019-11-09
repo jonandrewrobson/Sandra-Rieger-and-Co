@@ -1,0 +1,39 @@
+/* WIDGET: SEARCH FORM
+-------------------------------------------- */
+
+.vlt-search-form {
+	position: relative;
+	overflow: hidden;
+
+	input[type="text"] {
+		padding-right: 75px;
+
+		&:focus + button {
+			animation: vlt_btn_effect 250ms linear forwards;
+		}
+
+		&:focus {
+
+			@include input-placeholder {
+				opacity: 0;
+			}
+
+		}
+
+	}
+
+	button {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: 0;
+		padding: 0 30px 0 0;
+		font-size: 20px;
+		color: map-get($colors, 'p1');
+		border: none;
+		background: none;
+		cursor: pointer;
+	}
+
+}

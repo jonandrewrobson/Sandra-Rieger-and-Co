@@ -1,0 +1,38 @@
+/* WIDGET: TAG CLOUD
+-------------------------------------------- */
+
+.vlt-widget.widget_tag_cloud {
+	font-family: map-get($fonts, 'pf');
+	font-weight: 600;
+	line-height: 1.8;
+
+	span {
+		color: map-get($colors, 'c23');
+	}
+
+	a {
+		display: inline-block;
+		color: map-get($colors, 'c36');
+
+		&:hover {
+			color: map-get($colors, 'p1');
+		}
+
+	}
+
+}
+
+.vlt-widget.widget_tag_cloud.vlt-widget--white {
+	font-weight: 400;
+
+	a {
+		font-size: 16px !important;
+		color: map-get($colors, 'c12');
+
+		&:hover {
+			color: map-get($colors, 'p1');
+		}
+
+	}
+
+}

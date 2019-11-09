@@ -1,0 +1,16 @@
+/* FOOTER: STYLE 2
+-------------------------------------------- */
+
+.vlt-footer--style-2 {
+	@extend .vlt-footer--style-1;
+
+	.vlt-footer-content + .vlt-footer-copyright,
+	.vlt-footer-content + .vlt-footer-socials {
+		margin-top: 55px;
+	}
+
+	.vlt-footer-copyright + .vlt-footer-socials {
+		margin-top: 30px;
+	}
+
+}

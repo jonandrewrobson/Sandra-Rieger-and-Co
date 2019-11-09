@@ -1,0 +1,94 @@
+/* LAYOUT: GRID
+-------------------------------------------- */
+
+/* CONTAINER
+-------------------------------------------- */
+
+@include mq('xlarge', min) {
+
+	.container {
+		width: 1200px;
+		max-width: 100%;
+	}
+
+}
+
+/* MAIN
+-------------------------------------------- */
+
+.vlt-main {
+	position: relative;
+	overflow: hidden;
+
+	&--padding {
+		padding: 120px 0;
+	}
+
+}
+
+/* PROTECTED CONTENT
+-------------------------------------------- */
+
+.vlt-content-protected {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 80vh;
+	padding: 120px 0;
+}
+
+/* MARKUP CONTENT
+-------------------------------------------- */
+
+.vlt-content-markup {
+
+	p > a {
+		text-decoration: underline;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	ul,
+	ol {
+		padding-left: 30px;
+		line-height: 2;
+
+		ul,
+		ol {
+			margin-bottom: 0;
+
+		}
+
+	}
+
+	> ul,
+	> ol {
+		margin-bottom: 30px;
+	}
+
+	h1, .h1,
+	h2, .h2,
+	h3, .h3,
+	h4, .h4,
+	h5, .h5,
+	h6, .h6 {
+		margin: 30px 0 30px;
+	}
+
+	.fluid-width-video-wrapper {
+		margin-bottom: 30px;
+	}
+
+}
+
+/* WPBAKERY
+-------------------------------------------- */
+
+.vc_col-has-fill > .vc_column-inner,
+.vc_row-has-fill + .vc_row-full-width + .vc_row > .vc_column_container > .vc_column-inner,
+.vc_row-has-fill + .vc_row > .vc_column_container > .vc_column-inner,
+.vc_row-has-fill > .vc_column_container > .vc_column-inner {
+	padding-top: 0 !important;
+}

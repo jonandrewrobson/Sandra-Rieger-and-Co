@@ -1,0 +1,38 @@
+/* FOOTER: STYLE 4
+-------------------------------------------- */
+
+.vlt-footer--style-4 {
+	padding: 35px 0;
+
+	.vlt-footer-inner {
+
+		@include mq('medium') {
+			text-align: center
+		}
+
+		@include mq('medium', min) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+	}
+
+	.vlt-footer-copyright {
+		color: map-get($colors, 'c26');
+	}
+
+	.vlt-footer-socials {
+		font-size: 16px;
+
+		@include mq('medium') {
+			margin-top: 20px;
+		}
+
+		a:not(:hover) {
+			color: map-get($colors, 'c16');
+		}
+
+	}
+
+}

@@ -1,0 +1,103 @@
+.vlt-highlight {
+	background: linear-gradient(to top, transparent 5%, map-get($colors, 'p3') 5%, map-get($colors, 'p3') 37%, transparent 37%);
+}
+
+.vlt-first-color,
+.has-first-color {
+	color: map-get($colors, 'p1');
+}
+
+.vlt-first-background-color,
+.has-first-background-color {
+	background-color: map-get($colors, 'p1');
+}
+
+.vlt-second-color,
+.has-second-color {
+	color: map-get($colors, 'p2');
+}
+
+.vlt-second-background-color,
+.has-second-background-color {
+	background-color: map-get($colors, 'p2');
+}
+
+.vlt-third-color,
+.has-third-color {
+	color: map-get($colors, 'p3');
+}
+
+.vlt-third-background-color,
+.has-third-background-color {
+	background-color: map-get($colors, 'p3');
+}
+
+.vlt-fourth-color,
+.has-fourth-color {
+	color: map-get($colors, 'p4');
+}
+
+.vlt-fourth-background-color,
+.has-fourth-background-color {
+	background-color: map-get($colors, 'p4');
+}
+
+.vlt-gray-color,
+.has-gray-color {
+	color: map-get($colors, 'c17');
+}
+
+.vlt-gray-background-color,
+.has-gray-background-color {
+	background-color: map-get($colors, 'c17');
+}
+
+.vlt-white-color,
+.has-white-color {
+	color: map-get($colors, 'c0');
+}
+
+.vlt-white-background-color,
+.has-white-background-color {
+	background-color: map-get($colors, 'c0');
+}
+
+.vlt-primary-font {
+	font-family: map-get($fonts, 'pf');
+}
+
+.vlt-secondary-font {
+	font-family: map-get($fonts, 'sf');
+}
+
+.vlt-fullheight {
+	min-height: 100vh;
+}
+
+.vlt-overflow-enable {
+	overflow: hidden !important;
+}
+
+.vlt-overflow-disable {
+	overflow: inherit !important;
+}
+
+.fade-in-down {
+	animation: vlt_fade_in_down 500ms ease-in-out forwards;
+}
+
+.fade-out-up {
+	animation: vlt_fade_out_up 300ms ease-in-out forwards;
+}
+
+.vlt-gap-70 {
+	height: 70px;
+}
+
+.vlt-gap-120 {
+	height: 120px;
+}
+
+.vlt-display-1 {
+	@extend %vlt_display_1;
+}

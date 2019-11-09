@@ -1,0 +1,21 @@
+/* SHORTCODE: SPACER
+-------------------------------------------- */
+
+.vlt-spacer {
+	@include clearfix;
+	display: block;
+	padding-top: var(--size-xlarge, 0);
+
+	@include mq('large') {
+		padding-top: var(--size-large, 0);
+	}
+
+	@include mq('medium') {
+		padding-top: var(--size-medium, 0);
+	}
+
+	@include mq('small') {
+		padding-top: var(--size-small, 0);
+	}
+
+}

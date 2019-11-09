@@ -1,0 +1,40 @@
+/* HEADER: ANIMATED
+-------------------------------------------- */
+
+/* NAVBAR
+-------------------------------------------- */
+
+.vlt-header--animated {
+
+	.vlt-navbar {
+
+		.vlt-menu-shop-cart,
+		.vlt-menu-search-icon,
+		#vlt-menu-animated-toggle {
+			margin-left: 15px;
+		}
+
+	}
+
+}
+
+/* NAVIGATION
+-------------------------------------------- */
+
+.vlt-header--animated {
+
+	.vlt-default-navigation {
+
+		.sf-menu {
+
+			> li > a > span {
+				display: inline-block;
+				position: relative;
+				opacity: 0;
+			}
+
+		}
+
+	}
+
+}

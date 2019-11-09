@@ -1,0 +1,48 @@
+/* WORK: STYLE 4
+-------------------------------------------- */
+
+.vp-portfolio__items-style-leedo_work_style_4 {
+	@extend .vp-portfolio__items-style-default;
+
+	// overlay
+
+	.vp-portfolio__item-overlay {
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+		background-color: rgba(map-get($colors, 'c0'), .8);
+		will-change: opacity;
+		transition: opacity 1s cubic-bezier(.07, .72, .24, 1);
+	}
+
+	// meta
+
+	.vp-portfolio__item-meta {
+		text-align: center;
+		opacity: 1;
+		transition: opacity 300ms ease-in-out;
+	}
+
+	// categories
+
+	.vp-portfolio__item-meta-categories {
+		color: map-get($colors, 'c26');
+	}
+
+	// transitions
+
+	.vp-portfolio__item:hover {
+
+		.vp-portfolio__item-overlay {
+			opacity: 1;
+		}
+
+	}
+
+}

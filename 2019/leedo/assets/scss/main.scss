@@ -1,0 +1,138 @@
+/* Master Stylesheet
+ * Version: 1.0
+ *
+ * Powered by VLThemes
+ *
+ * 01. Helpers
+ * 02. Base
+ * 03. Layout
+ * 04. Pages
+ * 05. Partials
+ * 06. Vendors
+ * 07. Shortcodes
+ * 08. WooCommerce
+ */
+
+/* 01. Helpers */
+
+@import
+	'abstracts/variables',
+	'abstracts/functions',
+	'abstracts/mixins',
+	'abstracts/keyframes',
+	'abstracts/snippets';
+
+/* 02. Base */
+
+@import
+	'base/deprecated',
+	'base/helper-classes',
+	'base/gutenberg',
+	'base/typography';
+
+/* 03. Layout */
+
+@import
+	'layout/comments',
+	'layout/footer',
+	'layout/grid',
+	'layout/header',
+	'layout/navigation',
+	'layout/pagination',
+	'layout/sidebar';
+
+/* 04. Pages */
+
+@import
+	'pages/404',
+	'pages/empty',
+	'pages/blog',
+	'pages/portfolio';
+
+/* 05. Partials */
+
+@import
+	'partials/back-to-top',
+	'partials/fit-image',
+	'partials/large-link-with-arrow',
+	'partials/link-pages',
+	'partials/password-form',
+	'partials/scroll-to-arrow',
+	'partials/site-preloader',
+	'partials/site-protection',
+	'partials/social-icons';
+
+/* 06. Vendors */
+
+@import
+	'vendors/contact-form-7',
+	'vendors/fancybox',
+	'vendors/jarallax',
+	'vendors/masonry',
+	'vendors/ninja-forms',
+	'vendors/nprogress',
+	'vendors/photoswipe',
+	'vendors/swiper';
+
+/* 07. Shortcodes */
+
+@import
+	'shortcodes/ads-banner',
+	'shortcodes/alerts',
+	'shortcodes/artist-album',
+	'shortcodes/audio-player',
+	'shortcodes/awards-list',
+	'shortcodes/buttons',
+	'shortcodes/contact-info',
+	'shortcodes/countdown',
+	'shortcodes/counter-up',
+	'shortcodes/demo-item',
+	'shortcodes/dropcap',
+	'shortcodes/events-list',
+	'shortcodes/faq',
+	'shortcodes/fit-text',
+	'shortcodes/fixed-audio-link',
+	'shortcodes/fixed-social-links',
+	'shortcodes/instagram-feed',
+	'shortcodes/large-heading',
+	'shortcodes/marquee-element',
+	'shortcodes/page-title-empty',
+	'shortcodes/page-title-hero',
+	'shortcodes/page-title',
+	'shortcodes/particle',
+	'shortcodes/partner-logo',
+	'shortcodes/post-link-block',
+	'shortcodes/post-quote-block',
+	'shortcodes/pricing-toggle',
+	'shortcodes/pricing-table',
+	'shortcodes/process-step',
+	'shortcodes/progress-bar',
+	'shortcodes/progress-bar-circle',
+	'shortcodes/projects-preview',
+	'shortcodes/projects-showcase',
+	'shortcodes/section-title',
+	'shortcodes/services-box',
+	'shortcodes/services',
+	'shortcodes/simple-image',
+	'shortcodes/simple-link',
+	'shortcodes/social-share',
+	'shortcodes/spacer',
+	'shortcodes/subscribe-form',
+	'shortcodes/team-member',
+	'shortcodes/testimonial-item',
+	'shortcodes/testimonial-slider',
+	'shortcodes/timeline',
+	'shortcodes/video-link',
+	'shortcodes/watch-trailer',
+	'shortcodes/work-meta';
+
+/* 08. WooCommerce */
+
+@import
+	'woocommerce/woocommerce',
+	'woocommerce/loop',
+	'woocommerce/product-item',
+	'woocommerce/single-product',
+	'woocommerce/my-account',
+	'woocommerce/checkout',
+	'woocommerce/cart';

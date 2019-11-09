@@ -1,0 +1,147 @@
+/* LAYOUT: SIDEBAR
+-------------------------------------------- */
+
+.vlt-sidebar--right {
+	padding-left: 20px;
+
+	@include mq('medium') {
+		padding-left: 0;
+		margin-top: 60px;
+	}
+
+}
+
+.vlt-sidebar--left {
+	padding-right: 20px;
+
+	@include mq('medium') {
+		padding-right: 0;
+		margin-top: 60px;
+	}
+
+}
+
+/* WIDGET
+-------------------------------------------- */
+
+.vlt-widget {
+	display: block;
+
+	& ~ & {
+		margin-top: 50px;
+	}
+
+	&--white {
+		font-size: 16px;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			clear: both;
+		}
+
+		.children {
+			margin-left: 10px;
+		}
+
+	}
+
+	&__title {
+		margin: 0 0 30px 0;
+		padding: 0;
+		color: map-get($colors, 'p1');
+	}
+
+	.vlt-widget--white .vlt-widget--title {
+		margin-bottom: 22px;
+	}
+
+	input[type='text'],
+	input[type='email'],
+	input[type='password'],
+	input[type='tel'],
+	input[type='url'],
+	input[type='search'],
+	input[type='number'],
+	textarea,
+	select {
+		font-family: map-get($fonts, 'pf');
+		font-size: 18px;
+		font-weight: 500;
+		border-color: map-get($colors, 'p1');
+
+		@include input-placeholder {
+			color: map-get($colors, 'p1');
+		}
+
+	}
+
+	select {
+		color: map-get($colors, 'p1');
+		background-image: url('../img/select-color.png');
+	}
+
+
+	&.vlt-widget--white {
+
+		input[type='text'],
+		input[type='email'],
+		input[type='password'],
+		input[type='tel'],
+		input[type='url'],
+		input[type='search'],
+		input[type='number'],
+		textarea,
+		select {
+			font-weight: 400;
+			color: map-get($colors, 'c12');
+			background-color: transparent;
+		}
+
+		select {
+			color: map-get($colors, 'p1');
+		}
+
+		a {
+			color: map-get($colors, 'c0');
+		}
+
+	}
+
+}
+
+// import
+
+@import
+	'widgets/categories',
+	'widgets/search-form',
+	'widgets/archive',
+	'widgets/pages',
+	'widgets/meta',
+	'widgets/recent-comments',
+	'widgets/recent-entries',
+	'widgets/nav-menu',
+	'widgets/tag-cloud',
+	'widgets/text',
+	'widgets/socials',
+	'widgets/rss',
+	'widgets/calendar',
+	'widgets/instagram',
+	'widgets/banner',
+	'widgets/subscribe-form',
+	'widgets/post-list';
+
+// import woocommerce
+
+@import
+	'widgets/woo-mini-cart',
+	'widgets/woo-tag-cloud',
+	'widgets/woo-layered-nav',
+	'widgets/woo-price-filter',
+	'widgets/woo-product-list',
+	'widgets/woo-rating-filter',
+	'widgets/woo-product-categories';

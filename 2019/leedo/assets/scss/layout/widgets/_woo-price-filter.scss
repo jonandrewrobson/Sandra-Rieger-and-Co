@@ -1,0 +1,89 @@
+/* WIDGET: WOO PRICE FILTER
+-------------------------------------------- */
+
+.vlt-widget.widget_price_filter {
+
+	.price_slider {
+		margin-bottom: 25px;
+	}
+
+	.price_label {
+		font-family: map-get($fonts, 'pf');
+		font-weight: 600;
+		color: map-get($colors, 'c36');
+	}
+
+	.button {
+		@extend %vlt_display_1;
+		float: right;
+		margin: 8px 0;
+		padding: 0;
+		color: map-get($colors, 'c36');
+		border: none;
+		outline: none;
+		cursor: pointer;
+		transition: all 300ms ease-in-out;
+
+		&:hover {
+			color: map-get($colors, 'p1');
+		}
+
+	}
+
+	.ui-slider {
+		position: relative;
+		margin-left: .5em;
+		margin-right: .5em;
+		text-align: left;
+
+		.ui-slider-handle {
+			position: absolute;
+			width: 1em;
+			height: 1em;
+			top: -.35em;
+			margin-left: -.5em;
+			border: 3px solid map-get($colors, 'p1');
+			border-radius: 1em;
+			background-color: map-get($colors, 'c0');
+			cursor: ew-resize;
+			outline: none;
+			z-index: 2;
+		}
+
+		.ui-slider-range {
+			display: block;
+			position: absolute;
+			border: none;
+			background-color: map-get($colors, 'p1');
+			z-index: 1;
+		}
+
+	}
+
+	.price_slider_wrapper {
+
+		.ui-widget-content {
+			background-color: map-get($colors, 'c5');
+		}
+
+	}
+
+	.ui-slider-horizontal {
+		height: 5px;
+
+		.ui-slider-range {
+			top: 0;
+			height: 100%;
+		}
+
+		.ui-slider-range-min {
+			left: -1px;
+		}
+
+		.ui-slider-range-max {
+			right: -1px;
+		}
+
+	}
+
+}

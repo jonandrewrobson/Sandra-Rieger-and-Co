@@ -1,0 +1,45 @@
+/* VENDOR: NINJA FORMS
+-------------------------------------------- */
+
+.label-above .nf-field-label {
+	margin-bottom: 8px !important;
+}
+
+.label-below .nf-field-label {
+	margin-top: 8px !important;
+}
+
+.nf-field-label label {
+	font-weight: 400 !important;
+}
+
+.nf-error .ninja-forms-field {
+	border-width: 2px !important;
+}
+
+.label-left .nf-after-field {
+	margin-left: 35% !important;
+}
+
+.label-right .nf-field-label {
+	padding-left: 5% !important;
+}
+
+.field-wrap button,
+.field-wrap input[type='button'],
+.field-wrap input[type='submit'] {
+	@extend .vlt-btn;
+	@extend .vlt-btn--primary;
+}
+
+.nf-after-field .nf-error-msg {
+	margin-top: 6px;
+}
+
+.nf-error-msg,
+.ninja-forms-req-symbol {
+	@extend .vlt-display-1;
+	margin: 0;
+	padding: 0;
+	color: map-get($colors, 'p1') !important;
+}

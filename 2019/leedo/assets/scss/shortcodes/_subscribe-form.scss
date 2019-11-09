@@ -1,0 +1,91 @@
+/* SHORTCODE: SUBSCRIBE FORM
+-------------------------------------------- */
+
+.vlt-subscribe-form {
+	position: relative;
+
+	.vlt-subscribe-form__text {
+		margin: 0 0 20px 0;
+	}
+
+	.vlt-btn {
+		flex-shrink: 0;
+		margin-left: 15px;
+	}
+
+	.vlt-alert {
+		display: none;
+		margin: 15px 0 0;
+		padding: 0 !important;
+		font-size: 14px;
+		color: map-get($colors, 'p1');
+		border: none;
+		background: none;
+	}
+
+	.vlt-subscribe-form__checkbox {
+		margin-top: 15px;
+
+		label {
+			margin-bottom: 0;
+		}
+
+	}
+
+	&--style-1,
+	&--style-2 {
+
+		@include mq('small') {
+
+			.vlt-btn {
+				display: block;
+				width: 100%;
+				margin-top: 15px;
+				margin-left: 0;
+			}
+
+		}
+
+	}
+
+	&--style-3 {
+
+		input[type="email"] {
+			padding: 14px 20px;
+			font-family: map-get($fonts, 'sf');
+			font-size: 16px;
+			color: map-get($colors, 'c0');
+			border: none;
+			background-color: map-get($colors, 'c30') !important;
+
+			@include input-placeholder {
+				color: map-get($colors, 'c12');
+			}
+
+		}
+
+		.vlt-btn {
+			margin-left: 10px;
+			padding: 0 18px;
+		}
+
+	}
+
+}
+
+.vlt-widget.vlt-widget--white.vlt-widget-subscribe,
+.vlt-subscribe-form--light {
+
+	.vlt-subscribe-form__checkbox {
+
+		label {
+			color: map-get($colors, 'c12');
+		}
+
+		span::before {
+			border-color: map-get($colors, 'c12');
+		}
+
+	}
+
+}

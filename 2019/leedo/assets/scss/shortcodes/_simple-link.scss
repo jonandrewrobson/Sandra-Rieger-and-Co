@@ -1,0 +1,18 @@
+/* SHORTCODE: SIMPLE LINK
+-------------------------------------------- */
+
+.vlt-simple-link {
+	@extend .vlt-display-1;
+	color: map-get($colors, 'c36');
+
+	i {
+		display: inline-block;
+		margin-left: 10px;
+		transition: transform 150ms ease-in-out;
+	}
+
+	&:hover i {
+		transform: translateX(5px);
+	}
+
+}

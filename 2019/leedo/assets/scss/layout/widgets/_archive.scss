@@ -1,0 +1,10 @@
+/* WIDGET: ARCHIVE
+-------------------------------------------- */
+
+.vlt-widget.widget_archive {
+	@extend .vlt-widget.widget_categories;
+}
+
+.vlt-widget.vlt-widget--white.widget_archive {
+	@extend .vlt-widget.vlt-widget--white.widget_categories;
+}

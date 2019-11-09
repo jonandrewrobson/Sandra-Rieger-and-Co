@@ -1,0 +1,13 @@
+/* PARTIAL: POST TITLE
+-------------------------------------------- */
+
+.vlt-post-title {
+	margin: 0;
+	line-height: 1.45;
+
+	i {
+		margin-right: 10px;
+		color: map-get($colors, 'p1');
+	}
+
+}

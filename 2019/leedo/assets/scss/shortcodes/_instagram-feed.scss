@@ -1,0 +1,24 @@
+/* SHORTCODE: INSTAGRAM FEED
+-------------------------------------------- */
+
+.vlt-instagram-feed {
+	@extend .vlt-widget.vlt-widget-instagram;
+
+	ul {
+		grid-template-columns: repeat(8, 1fr);
+		grid-gap: 0;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		@include mq('medium') {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		a::after {
+			font-size: 34px;
+		}
+
+	}
+
+}

@@ -1,0 +1,46 @@
+/* PAGE: 404
+-------------------------------------------- */
+
+.vlt-page--404 {
+	padding: 60px 0 120px;
+	text-align: center;
+
+	strong {
+		display: block;
+		margin-bottom: 5px;
+		font-family: map-get($fonts, 'pf');
+		font-size: 180px;
+		line-height: 1;
+		font-weight: 700;
+		color: map-get($colors, 'p2');
+
+		@include mq('small') {
+			font-size: 150px;
+		}
+
+	}
+
+	h1 {
+		margin: 0;
+		font-size: 48px;
+
+		@include lowercase {
+			text-transform: lowercase;
+		}
+
+		@include mq('small') {
+			font-size: 38px;
+		}
+
+	}
+
+	p {
+		max-width: 360px;
+		margin: 20px auto 0;
+	}
+
+	.vlt-btn {
+		margin-top: 50px;
+	}
+
+}

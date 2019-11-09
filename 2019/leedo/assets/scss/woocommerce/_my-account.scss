@@ -1,0 +1,235 @@
+/* NAVIGATION
+-------------------------------------------- */
+
+.vlt-woocommerce-myaccount-navigation {
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+
+		li {
+			font-family: map-get($fonts, 'pf');
+			color: map-get($colors, 'c36');
+			font-weight: 600;
+			line-height: 2.5;
+		}
+
+		li.woocommerce-MyAccount-navigation-link--customer-logout a {
+
+			&::before {
+				content: '\f2f5';
+				margin-right: 5px;
+				font-family: map-get($fonts, 'fa');
+				font-weight: 900;
+			}
+
+		}
+
+		a {
+			display: inline-block;
+
+			&:hover {
+				transform: translateY(-2px);
+			}
+
+		}
+
+	}
+
+}
+
+/* CONTENT
+-------------------------------------------- */
+
+.vlt-woocommerce-myaccount-content {
+
+	@include mq('medium', min) {
+		margin-left: 15px;
+	}
+
+	@include mq('medium') {
+		margin-top: 50px;
+	}
+
+	section + section {
+		margin-top: 70px;
+	}
+
+	// hello
+
+	.vlt-woocommrece-dashboard-hello {
+
+		strong {
+			color: map-get($colors, 'c36');
+		}
+
+	}
+
+	// addresses tab
+
+	.vlt-woocommerce-addresses {
+
+		header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 30px;
+			color: map-get($colors, 'c36');
+
+			h4 {
+				margin: 0;
+
+				@include lowercase {
+					text-transform: lowercase;
+				}
+
+			}
+
+			a {
+				margin-left: 50px;
+			}
+
+		}
+
+		@include mq('medium', min) {
+
+			.woocommerce-Address {
+				padding-right: 60px;
+			}
+
+		}
+
+		@include mq('medium') {
+
+			.woocommerce-Address + .woocommerce-Address {
+				margin-top: 20px;
+			}
+
+		}
+
+	}
+
+	// edit address
+
+	.vlt-form-edit-address {
+
+		h3 {
+			margin: 0 0 70px;
+
+			@include lowercase {
+				text-transform: lowercase;
+			}
+
+		}
+
+		.woocommerce-address-fields__field-wrapper {
+			margin-bottom: 30px;
+		}
+
+	}
+
+	// edit account
+
+	.vlt-woocommerce-edit-account-form {
+
+		input + span {
+			display: block;
+			margin-top: 10px;
+			font-size: 80%;
+		}
+
+		fieldset {
+			margin-bottom: 30px;
+			padding: 20px 20px 25px;
+			border: 1px solid map-get($colors, 'c4');
+
+			legend {
+				font-family: map-get($fonts, 'pf');
+				color: map-get($colors, 'c36');
+			}
+
+			p:last-child {
+				margin-bottom: 0;
+			}
+
+		}
+
+	}
+
+	// order downloads
+
+	.vlt-woocommerce-order-downloads {
+
+		table {
+			margin-bottom: 0;
+		}
+
+		h3 {
+			margin: 0 0 30px;
+
+			@include lowercase {
+				text-transform: lowercase;
+			}
+
+		}
+
+	}
+
+	// order details
+
+	.vlt-woocommerce-order-details {
+		@extend .vlt-woocommerce-order-downloads;
+	}
+
+	// order customer details
+
+	.vlt-woocommerce-customer-details {
+		@extend .vlt-woocommerce-order-downloads;
+
+		.woocommerce-column--shipping-address {
+
+			@include mq('medium') {
+				margin-top: 20px;
+			}
+
+		}
+
+	}
+
+}
+
+/* FORM LOGIN / REGISTER
+-------------------------------------------- */
+
+.vlt-woocommerce-form-login-wrapper,
+.vlt-woocommerce-form-register-wrapper,
+.vlt-woocommerce-reset-password-wrapper {
+	max-width: 500px;
+
+	h2 {
+		margin: 0 0 40px;
+
+		@include lowercase {
+			text-transform: lowercase;
+		}
+
+	}
+
+	.vlt-custom-checkbox-wrap {
+		margin-left: 30px;
+	}
+
+	p.lost_password {
+		margin-bottom: 0;
+	}
+
+}
+
+.vlt-woocommerce-form-register-wrapper {
+
+	@include mq('medium') {
+		margin-top: 50px;
+	}
+
+}

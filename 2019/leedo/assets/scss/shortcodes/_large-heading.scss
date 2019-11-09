@@ -1,0 +1,25 @@
+/* SHORTCODE: LARGE HEADING
+-------------------------------------------- */
+
+.vlt-large-heading {
+	margin: 0;
+	font-size: 150px;
+	line-height: 1;
+
+	@include lowercase {
+		text-transform: lowercase;
+	}
+
+	span {
+		color: map-get($colors, 'p1');
+	}
+
+	@include mq('medium') {
+		font-size: 90px;
+	}
+
+	@include mq('small') {
+		font-size: 48px;
+	}
+
+}

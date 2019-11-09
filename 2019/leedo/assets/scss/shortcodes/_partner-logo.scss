@@ -1,0 +1,16 @@
+/* SHORTCODE: PARTNER LOGO
+-------------------------------------------- */
+
+.vlt-partner-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	a,
+	img {
+		display: block;
+		flex-shrink: 0;
+		width: auto;
+	}
+
+}

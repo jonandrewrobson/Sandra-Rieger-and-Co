@@ -1,0 +1,18 @@
+/* PARTIAL: SCROLL TO ARROW
+-------------------------------------------- */
+
+.vlt-scroll-to-arrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	width: 30px;
+	font-size: 22px;
+	color: map-get($colors, 'c0');
+	z-index: 2;
+
+	&:hover {
+		color: rgba(map-get($colors, 'c0'), .8);
+	}
+
+}

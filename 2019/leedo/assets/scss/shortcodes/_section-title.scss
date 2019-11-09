@@ -1,0 +1,33 @@
+/* SHORTCODE: SECTION TITLE
+-------------------------------------------- */
+
+.vlt-section-title {
+	display: block;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin: 0;
+
+		@include lowercase {
+			text-transform: lowercase;
+		}
+
+	}
+
+	p {
+		margin: 20px 0 0;
+	}
+
+}
+
+@include mq('medium', min) {
+
+	.vlt-section-title.text-center {
+		padding: 0 35px;
+	}
+
+}

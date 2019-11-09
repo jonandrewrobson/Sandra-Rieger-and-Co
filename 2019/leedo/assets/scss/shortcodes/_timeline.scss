@@ -1,0 +1,74 @@
+/* SHORTCODE: TIMELINE
+-------------------------------------------- */
+
+.vlt-timeline {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.vlt-timeline__item {
+	display: flex;
+
+	&-meta {
+		flex-shrink: 0;
+		width: 160px;
+		padding: 15px 35px 0 0;
+		text-align: right;
+
+		@include mq('medium') {
+			width: 100px;
+		}
+
+		strong {
+			display: block;
+			font-family: map-get($fonts, 'pf');
+			font-size: 16px;
+			line-height: 1;
+			color: map-get($colors, 'c36');
+		}
+
+		em {
+			display: block;
+			margin-top: 5px;
+			font-size: 15px;
+			color: map-get($colors, 'c24');
+
+			@include mq('medium') {
+				display: none;
+			}
+
+		}
+
+	}
+
+	&-content {
+		position: relative;
+		padding: 15px 0 30px 35px;
+		font-size: 16px;
+		border-left: 1px solid map-get($colors, 'c10');
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: -7px;
+			top: 15px;
+			height: 13px;
+			width: 13px;
+			border: 2px solid map-get($colors, 'p1');
+			border-radius: 50%;
+			background-color: map-get($colors, 'c0');
+		}
+
+		h6 {
+			margin: -6px 0 10px;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+
+	}
+
+}

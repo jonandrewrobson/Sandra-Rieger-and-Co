@@ -1,0 +1,224 @@
+/* SHORTCODE: BUTTONS
+-------------------------------------------- */
+
+.vlt-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	padding: 19px 30px;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	transition: all 300ms ease-in-out;
+	outline: 0;
+	overflow: hidden;
+	cursor: pointer;
+
+	&:disabled,
+	&.disabled {
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+
+	i {
+		margin-left: 15px;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+}
+
+/* BUTTON EFFECT
+-------------------------------------------- */
+
+.vlt-btn--effect {
+	@extend %btn_effect;
+}
+
+/* BUTTON PRIMARY
+-------------------------------------------- */
+
+.vlt-btn--primary {
+	color: map-get($colors, 'c0');
+	background-color: map-get($colors, 'p1');
+
+	&::after {
+		background-color: map-get($colors, 'p2');
+	}
+
+	&:hover {
+		color: map-get($colors, 'c0');
+	}
+
+	&:not(.vlt-btn--effect):hover {
+		background-color: map-get($colors, 'p2');
+	}
+
+}
+
+/* BUTTON SECONDARY
+-------------------------------------------- */
+
+.vlt-btn--secondary {
+	color: map-get($colors, 'c0');
+	background-color: map-get($colors, 'p2');
+
+	&::after {
+		background-color: map-get($colors, 'p1');
+	}
+
+	&:hover {
+		color: map-get($colors, 'c0');
+	}
+
+	&:not(.vlt-btn--effect):hover {
+		background-color: map-get($colors, 'p1');
+	}
+
+}
+
+/* BUTTON THIRD
+-------------------------------------------- */
+
+.vlt-btn--third {
+	color: map-get($colors, 'c0');
+	background-color: map-get($colors, 'c14');
+
+	&::after {
+		background-color: map-get($colors, 'p1');
+	}
+
+	&:hover {
+		color: map-get($colors, 'c0');
+	}
+
+	&:not(.vlt-btn--effect):hover {
+		background-color: map-get($colors, 'p1');
+	}
+
+}
+
+/* BUTTON FOURTH
+-------------------------------------------- */
+
+.vlt-btn--fourth {
+	color: map-get($colors, 'c0');
+	background-color: transparent;
+	box-shadow: inset 0 0 0 2px map-get($colors, 'c0');
+
+	&::after {
+		background-color: map-get($colors, 'c0');
+	}
+
+	&:hover {
+		color: map-get($colors, 'c36');
+	}
+
+	&:not(.vlt-btn--effect):hover {
+		background-color: map-get($colors, 'c0');
+	}
+
+}
+
+/* BUTTON FIFTH
+-------------------------------------------- */
+
+.vlt-btn--fifth {
+	color: map-get($colors, 'c0');
+	background-color: map-get($colors, 'c36');
+
+	&::after {
+		background-color: map-get($colors, 'p2');
+	}
+
+	&:hover {
+		color: map-get($colors, 'c0');
+	}
+
+	&:not(.vlt-btn--effect):hover {
+		background-color: map-get($colors, 'p2');
+	}
+
+}
+
+/* BUTTON SIXTH
+-------------------------------------------- */
+
+.vlt-btn--sixth {
+	color: map-get($colors, 'c0');
+	background-color: map-get($colors, 'p1');
+
+	&::after {
+		background-color: map-get($colors, 'c0');
+	}
+
+	&:hover {
+		color: map-get($colors, 'c36');
+	}
+
+	&:not(.vlt-btn--effect):hover {
+		background-color: map-get($colors, 'c0');
+	}
+
+}
+
+/* BUTTON SEVENTH
+-------------------------------------------- */
+
+.vlt-btn--seventh {
+	color: map-get($colors, 'c36');
+	background-color: map-get($colors, 'c0');
+
+	&::after {
+		background-color: map-get($colors, 'p2');
+	}
+
+	&:hover {
+		color: map-get($colors, 'c0');
+	}
+
+	&:not(.vlt-btn--effect):hover {
+		background-color: map-get($colors, 'p2');
+	}
+
+}
+
+/* BUTTON EIGHTH
+-------------------------------------------- */
+
+.vlt-btn--eighth {
+	color: map-get($colors, 'c0');
+	background-color: transparent;
+	box-shadow: inset 0 0 0 2px map-get($colors, 'p1');
+
+	&::after {
+		background-color: map-get($colors, 'p1');
+	}
+
+	&:hover {
+		color: map-get($colors, 'c0');
+	}
+
+	&:not(.vlt-btn--effect):hover {
+		background-color: map-get($colors, 'p1');
+	}
+
+}
+
+/* BUTTON SIZES
+-------------------------------------------- */
+
+.vlt-btn--lg {
+	padding: 23px 45px;
+}
+
+.vlt-btn--sm {
+	padding: 14px 25px;
+}
+
+.vlt-btn--xs {
+	padding: 12px 20px;
+}

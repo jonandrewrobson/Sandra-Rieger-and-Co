@@ -1,0 +1,15 @@
+/* SHORTCODE: POST QUOTE BLOCK
+-------------------------------------------- */
+
+.vlt-post-quote-block {
+	@extend .vlt-post-link-block;
+
+	&::before {
+		background-color: map-get($colors, 'p1');
+	}
+
+	i {
+		font-size: 30px;
+	}
+
+}

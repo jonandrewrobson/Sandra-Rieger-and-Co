@@ -1,0 +1,138 @@
+/* VENDOR: FANCYBOX
+-------------------------------------------- */
+
+.fancybox-bg {
+	background-color: map-get($colors, 'c36');
+}
+
+.fancybox-is-open .fancybox-bg {
+	opacity: .8;
+}
+
+/* CAPTION
+-------------------------------------------- */
+
+.fancybox-caption {
+	padding: 25px 15px;
+	text-align: center;
+	color: map-get($colors, 'c0');
+
+	h3 {
+		margin: 0 0 10px;
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	&::before,
+	&::after {
+		display: none;
+	}
+
+}
+
+/* BUTTONS
+-------------------------------------------- */
+
+.fancybox-show-caption .fancybox-caption,
+.fancybox-show-infobar .fancybox-infobar,
+.fancybox-show-nav .fancybox-navigation .fancybox-button,
+.fancybox-show-toolbar .fancybox-toolbar {
+	transition: all 300ms ease-in-out;
+}
+
+.fancybox-navigation,
+.fancybox-toolbar {
+
+	.fancybox-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		height: 55px;
+		width: 55px;
+		padding: 0;
+		font-size: 25px;
+		color: map-get($colors, 'c0');
+		background-color: map-get($colors, 'p1');
+		transition: all 300ms ease-in-out;
+		cursor: pointer;
+		overflow: hidden;
+
+		&:hover {
+			color: map-get($colors, 'c0');
+			background-color: map-get($colors, 'p2');
+		}
+
+		span {
+			display: block;
+			position: relative;
+		}
+
+	}
+
+}
+
+.fancybox-navigation .fancybox-button {
+	top: calc(50% - 27.5px);
+}
+
+.fancybox-navigation .fancybox-button--arrow_left {
+	left: 0;
+
+	&:hover span {
+		animation: vlt_animate_icon_left 300ms linear forwards;
+	}
+
+}
+
+.fancybox-navigation .fancybox-button--arrow_right {
+	right: 0;
+
+	&:hover span {
+		animation: vlt_animate_icon_right 300ms linear forwards;
+	}
+
+}
+
+.fancybox-loading {
+	border: 2px solid rgba(map-get($colors, 'c0'), 0.5);
+	border-top-color: map-get($colors, 'p1');
+}
+
+@media (min-width: 783px) {
+
+	.admin-bar {
+
+		.fancybox-infobar,
+		.fancybox-toolbar {
+			top: 32px !important;
+		}
+
+	}
+
+}
+
+@media (max-width: 782px) {
+
+	.admin-bar {
+
+		.fancybox-infobar,
+		.fancybox-toolbar {
+			top: 46px !important;
+		}
+
+	}
+
+}
+
+@media (max-width: 600px) {
+
+	.admin-bar {
+
+		.fancybox-infobar,
+		.fancybox-toolbar {
+			top: 0 !important;
+		}
+
+	}
+
+}

@@ -1,0 +1,61 @@
+/* SHORTCODE: SERVICES BOX
+-------------------------------------------- */
+
+.vlt-services-box {
+	position: relative;
+	padding: 80px 85px;
+	background-color: map-get($colors, 'c0');
+
+	@include mq('medium') {
+		padding: 70px 65px;
+	}
+
+	@include mq('small') {
+		padding: 60px 55px;
+	}
+
+	&__zigzag {
+		height: 11px;
+		width: 52px;
+		margin-bottom: 15px;
+		background-position: 10px 30px;
+	}
+
+	&__title {
+		margin: 0;
+
+		@include lowercase {
+			text-transform: lowercase;
+		}
+
+	}
+
+	&__text {
+		margin: 20px 0 0;
+		font-size: 16px;
+	}
+
+	&__link {
+		@extend %btn_effect;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		height: 55px;
+		width: 55px;
+		color: map-get($colors, 'c0');
+		background-color: map-get($colors, 'p1');
+
+		&::after {
+			background-color: map-get($colors, 'p2');
+		}
+
+		&:hover {
+			color: map-get($colors, 'c0');
+		}
+
+	}
+
+}

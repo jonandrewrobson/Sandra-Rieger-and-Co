@@ -1,0 +1,125 @@
+/* SHORTCODE: PROCESS STEP
+-------------------------------------------- */
+
+/* STYLE 1
+-------------------------------------------- */
+
+.vlt-process-step--style-1 {
+
+	.vlt-process-step__value {
+		position: relative;
+		float: left;
+		margin-top: 5px;
+		font-family: map-get($fonts, 'pf');
+		font-size: 40px;
+		line-height: 1;
+		color: map-get($colors, 'p1');
+	}
+
+	.vlt-process-step__content {
+		padding-left: 80px;
+
+		h4 {
+			margin: 0;
+			font-size: 24px;
+
+			@include lowercase {
+				text-transform: lowercase;
+			}
+
+		}
+
+		p {
+			margin: 15px 0 0;
+			font-size: 16px;
+		}
+
+	}
+
+}
+
+/* STYLE 2
+-------------------------------------------- */
+
+.vlt-process-step--style-2 {
+	padding-right: 10px;
+
+	.vlt-process-step__value {
+		margin-bottom: 15px;
+		font-family: map-get($fonts, 'pf');
+		font-size: 58px;
+		line-height: 1;
+		color: map-get($colors, 'p1');
+
+		strong {
+			font-weight: 800;
+		}
+
+	}
+
+	.vlt-process-step__content {
+
+		h4 {
+			margin: 0;
+			font-size: 24px;
+
+			@include lowercase {
+				text-transform: lowercase;
+			}
+
+		}
+
+		p {
+			margin: 15px 0 0;
+			font-size: 16px;
+		}
+
+	}
+
+}
+
+/* STYLE 3
+-------------------------------------------- */
+
+.vlt-process-step--style-3 {
+	position: relative;
+	padding-right: 10px;
+
+	.vlt-process-step__value {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-family: map-get($fonts, 'pf');
+		font-size: 80px;
+		line-height: 1;
+		color: map-get($colors, 'c2');
+
+		strong {
+			font-weight: 800;
+		}
+
+	}
+
+	.vlt-process-step__content {
+		position: relative;
+		padding-top: 25px;
+		z-index: 2;
+
+		h4 {
+			margin: 0;
+			font-size: 24px;
+
+			@include lowercase {
+				text-transform: lowercase;
+			}
+
+		}
+
+		p {
+			margin: 30px 0 0;
+			font-size: 16px;
+		}
+
+	}
+
+}

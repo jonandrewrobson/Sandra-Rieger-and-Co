@@ -1,0 +1,168 @@
+/* POST: SINGLE
+-------------------------------------------- */
+
+.vlt-single-post-wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+/* LAYOUTS
+-------------------------------------------- */
+
+.vlt-single-post-wrapper--style-1,
+.vlt-single-post-wrapper--style-2 {
+	padding-top: 120px;
+}
+
+.vlt-single-post-wrapper--style-3 {
+	padding-top: 100px;
+}
+
+.vlt-single-post-wrapper--style-4,
+.vlt-single-post-wrapper--style-5 {
+	padding: 120px 0;
+
+	.vlt-comment-form--style-2 {
+		padding-bottom: 0;
+	}
+
+}
+
+.vlt-single-post-wrapper--style-6,
+.vlt-single-post-wrapper--style-7 {
+	padding: 15px 0 120px;
+
+	.vlt-single-post-thumbnail {
+		margin-bottom: 120px;
+	}
+
+	.vlt-comment-form--style-2 {
+		padding-bottom: 0;
+	}
+
+}
+
+/* HEADER STYLE 1
+-------------------------------------------- */
+
+.vlt-single-post__header--style-1 {
+	padding-bottom: 60px;
+
+	.vlt-post-title {
+		font-size: 48px;
+		line-height: 1.25;
+
+		@include mq('large') {
+			font-size: 32px;
+		}
+
+		@include mq('medium') {
+			font-size: 26px;
+		}
+
+	}
+
+	.vlt-post-meta {
+		margin-top: 20px;
+		color: map-get($colors, 'c17');
+	}
+
+}
+
+/* HEADER STYLE 2
+-------------------------------------------- */
+
+.vlt-single-post__header--style-2 {
+	@extend .vlt-single-post__header--style-1;
+
+	.vlt-post-title {
+		color: map-get($colors, 'p1');
+	}
+
+}
+
+/* SINGLE POST
+-------------------------------------------- */
+
+.vlt-single-post {
+	padding-bottom: 100px;
+}
+
+.vlt-single-post__footer {
+	padding-top: 65px;
+
+	.vlt-post-tags {
+		font-size: 16px;
+		font-style: italic;
+		color: map-get($colors, 'c36');
+
+		h5 {
+			display: inline-block;
+			margin: 0;
+			padding-right: 4px;
+			font-style: normal;
+			line-height: inherit;
+			color: map-get($colors, 'c20');
+		}
+
+		a:hover {
+			color: map-get($colors, 'p1');
+		}
+
+	}
+
+	.vlt-social-share {
+		padding-top: 25px;
+		text-align: center;
+	}
+
+	.vlt-post-tags + .vlt-social-share {
+		padding-top: 90px;
+	}
+
+}
+
+/* ALSO LIKE POSTS
+-------------------------------------------- */
+
+.vlt-also-like-posts {
+	padding-bottom: 40px;
+}
+
+/* ABOUT AUTHOR
+-------------------------------------------- */
+
+.vlt-about-author {
+	margin: 150px 0 0;
+	padding: 50px 12% 100px;
+	text-align: center;
+	background-color: map-get($colors, 'c2');
+
+	&__avatar {
+		margin-top: -100px;
+		margin-bottom: 30px;
+		transition: transform 300ms ease-in-out;
+
+		&:hover {
+			transform: translateY(-10px);
+		}
+
+		img {
+			border-radius: 50%;
+		}
+
+	}
+
+	&__content {
+
+		h4 {
+			margin: 0 0 25px;
+		}
+
+		p {
+			margin-bottom: 40px;
+		}
+
+	}
+
+}

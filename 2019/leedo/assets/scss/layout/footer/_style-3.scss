@@ -1,0 +1,17 @@
+/* FOOTER: STYLE 3
+-------------------------------------------- */
+
+.vlt-footer--style-3 {
+	@extend .vlt-footer--style-2;
+
+	.vlt-footer-content a,
+	.vlt-footer-socials a,
+	.vlt-footer-copyright {
+		color: map-get($colors, 'p4');
+	}
+
+	.vlt-footer-copyright {
+		opacity: .75;
+	}
+
+}

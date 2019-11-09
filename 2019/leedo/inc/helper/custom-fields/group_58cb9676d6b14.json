@@ -1,0 +1,138 @@
+{
+    "key": "group_58cb9676d6b14",
+    "title": "[Widget] Socials",
+    "fields": [
+        {
+            "key": "field_5b852fedf04ce",
+            "label": "Style",
+            "name": "social_style",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "style-1": "Style 1",
+                "style-2": "Style 2",
+                "style-3": "Style 3",
+                "style-4": "Style 4"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "style-1",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5b852c571e93f",
+            "label": "Social List",
+            "name": "social_list",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add new social",
+            "sub_fields": [
+                {
+                    "key": "field_5b852ca91e940",
+                    "label": "Social Icon",
+                    "name": "social_icon",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "fab fa-twitch": "Twitch",
+                        "fab fa-vimeo": "Vimeo",
+                        "fab fa-youtube": "Youtube",
+                        "fab fa-facebook-f": "Facebook",
+                        "fab fa-twitter": "Twitter",
+                        "fab fa-pinterest": "Pinterest",
+                        "fab fa-instagram": "Instagram",
+                        "fab fa-linkedin-in": "LinkedIn",
+                        "fab fa-behance": "Behance",
+                        "fab fa-odnoklassniki": "Odnoklassniki",
+                        "fab fa-skype": "Skype",
+                        "fab fa-vk": "VK",
+                        "fab fa-steam": "Steam",
+                        "fab fa-bitbucket": "Bitbucket",
+                        "fab fa-dropbox": "Dropbox",
+                        "fab fa-dribbble": "Dribbble",
+                        "fab fa-deviantart": "Deviantart",
+                        "fab fa-flickr": "Flickr",
+                        "fab fa-foursquare": "Foursquare",
+                        "fab fa-github": "Github",
+                        "fab fa-medium": "Medium",
+                        "fab fa-paypal": "PayPal",
+                        "fab fa-reddit": "Reddit",
+                        "fab fa-soundcloud": "SoundCloud",
+                        "fab fa-slack": "Slack",
+                        "fab fa-tumblr": "Tumblr",
+                        "fab fa-spotify": "Spotify",
+                        "fab fa-wordpress": "WordPress"
+                    },
+                    "default_value": [],
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5b852d2c1e941",
+                    "label": "Social Url",
+                    "name": "social_url",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "widget",
+                "operator": "==",
+                "value": "vlthemes_widget_socials"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1570641784
+}

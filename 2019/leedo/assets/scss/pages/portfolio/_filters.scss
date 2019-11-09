@@ -1,0 +1,136 @@
+/* PORTFOLIO: FILTERS
+-------------------------------------------- */
+
+.vp-portfolio__filter-sort-wrap {
+	align-items: center;
+}
+
+.vp-portfolio__filter-sort-wrap,
+.vp-portfolio__filter-wrap,
+.vp-portfolio__sort-wrap {
+	margin-bottom: 60px;
+}
+
+.vp-portfolio__filter-sort-wrap {
+
+	@include mq('medium') {
+		display: block;
+
+		.vp-sort {
+			justify-content: center !important;
+		}
+
+	}
+
+	.vp-portfolio__filter-wrap,
+	.vp-portfolio__sort-wrap {
+		margin-bottom: 0;
+	}
+
+	@include mq('medium') {
+
+		.vp-portfolio__filter-wrap + .vp-portfolio__sort-wrap,
+		.vp-portfolio__sort-wrap + .vp-portfolio__filter-wrap {
+			margin-top: 30px;
+		}
+
+	}
+
+}
+
+.vp-sort__style-leedo,
+.vp-filter__style-leedo {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	@include mq('medium') {
+		display: block;
+	}
+
+	.vp-filter__item a,
+	.vp-sort__item a {
+		outline: none;
+		box-shadow: none;
+		text-decoration: none;
+	}
+
+	&.vp-filter__align-left,
+	&.vp-sort__align-left {
+		justify-content: flex-start;
+	}
+
+	&.vp-filter__align-right,
+	&.vp-sort__align-right {
+		justify-content: flex-end;
+	}
+
+	.vp-filter__item + .vp-filter__item,
+	.vp-sort__item + .vp-sort__item {
+		margin-left: 30px;
+
+		@include mq('medium') {
+			margin-top: 15px;
+			margin-left: 0;
+		}
+
+	}
+
+	.vp-filter__item,
+	.vp-sort__item {
+		flex: 0 0 auto;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		list-style-type: none;
+
+		> * {
+			display: inline-block;
+			color: map-get($colors, 'c36');
+		}
+
+		& > *:hover,
+		&.vp-filter__item-active > *,
+		&.vp-sort__item-active > * {
+			color: map-get($colors, 'p1');
+		}
+
+		&.vp-filter__item-active > *,
+		&.vp-sort__item-active > * {
+			cursor: default;
+			pointer-events: none;
+		}
+
+	}
+
+}
+
+.vp-filter__style-dropdown,
+.vp-sort__style-dropdown {
+	margin: 0 !important;
+
+	select {
+		width: 245px;
+		margin: 0 !important;
+		padding: 10px 15px !important;
+		color: map-get($colors, 'c22') !important;
+		border-color: map-get($colors, 'c3') !important;
+		border-width: 2px;
+		line-height: inherit !important;
+		background-color: map-get($colors, 'c3') !important;
+		background-image: url('../img/select-two.png');
+		background-position: right 15px bottom 50%;
+		background-repeat: no-repeat;
+		background-size: 10px 5px;
+
+		&:hover,
+		&:focus {
+			border-color: map-get($colors, 'c3') !important;
+		}
+
+	}
+
+}

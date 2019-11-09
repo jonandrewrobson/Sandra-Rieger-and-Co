@@ -1,0 +1,29 @@
+/* SHORTCODE: PAGE TITLE EMPTY
+-------------------------------------------- */
+
+.vlt-page-title-empty {
+	background-color: map-get($colors, 'c5');
+
+	&--lg {
+		padding-top: 41%;
+	}
+
+	&--md {
+		padding-top: 36%;
+	}
+
+	&--sm {
+		padding-top: 31%;
+	}
+
+	@include mq('medium') {
+		padding-top: 100%;
+	}
+
+	.vlt-video-link {
+		position: absolute;
+		top: calc(50% - 50px);
+		left: calc(50% - 50px);
+	}
+
+}

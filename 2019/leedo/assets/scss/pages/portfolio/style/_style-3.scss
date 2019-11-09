@@ -1,0 +1,17 @@
+/* WORK: STYLE 3
+-------------------------------------------- */
+
+.vp-portfolio__items-style-leedo_work_style_3 {
+	@extend .vp-portfolio__items-style-fade;
+
+	// overlay
+
+	.vp-portfolio__item-overlay {
+
+		> * {
+			display: none;
+		}
+
+	}
+
+}

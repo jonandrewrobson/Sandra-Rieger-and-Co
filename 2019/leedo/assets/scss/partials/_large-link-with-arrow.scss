@@ -1,0 +1,40 @@
+/* PARTIAL: LARGE LINK WITH ARROW
+-------------------------------------------- */
+
+.vlt-large-link {
+	font-family: map-get($fonts, 'pf');
+	font-size: 58px;
+	font-weight: 700;
+	line-height: 1;
+	color: map-get($colors, 'p1');
+
+	@include lowercase {
+		text-transform: lowercase;
+	}
+
+	@include mq('medium') {
+		font-size: 38px;
+	}
+
+	i {
+		display: inline-block;
+		margin-left: 70px;
+		font-size: 34px;
+		vertical-align: middle;
+
+		@include mq('medium') {
+			margin-left: 40px;
+			font-size: 20px;
+		}
+
+	}
+
+	&:hover {
+
+		i {
+			animation: vlt_animate_icon_right 300ms ease-in-out forwards;
+		}
+
+	}
+
+}

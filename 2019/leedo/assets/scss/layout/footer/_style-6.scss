@@ -1,0 +1,11 @@
+/* FOOTER: STYLE 6
+-------------------------------------------- */
+
+.vlt-footer--style-6 {
+	@extend .vlt-footer--style-1;
+
+	.vlt-footer-copyright {
+		color: map-get($colors, 'c15');
+	}
+
+}

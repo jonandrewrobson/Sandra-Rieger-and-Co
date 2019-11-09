@@ -1,0 +1,78 @@
+/* WIDGET: INSTAGRAM
+-------------------------------------------- */
+
+.vlt-widget.vlt-widget-instagram {
+
+	ul {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 10px;
+
+		li {
+			overflow: hidden;
+		}
+
+		a {
+			display: block;
+			position: relative;
+			padding-top: 100%;
+			font-size: 0;
+
+			&::after,
+			&::before {
+				content: '';
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				opacity: 0;
+				transition: all 500ms ease-in-out;
+			}
+
+			&::before {
+				opacity: 0;
+				background-color: map-get($colors, 'p2');
+			}
+
+			&::after {
+				content: '\f16d';
+				font-family: map-get($fonts, 'fab');
+				font-size: 22px;
+				color: map-get($colors, 'c0');
+				transform: translateY(100%);
+			}
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				font-family: 'object-fit: cover;';
+				object-fit: cover;
+				z-index: -1;
+			}
+
+		}
+
+		a:hover {
+
+			&::before {
+				opacity: .8;
+			}
+
+			&::after {
+				opacity: 1;
+				transform: translateY(0);
+				transition-delay: 100ms;
+			}
+
+		}
+
+	}
+
+}

@@ -1,0 +1,70 @@
+/* SHOP PAGINATION
+-------------------------------------------- */
+
+.vlt-products-list {
+
+	.vlt-pagination {
+		margin-top: 55px;
+	}
+
+}
+
+/* SHOP TOP BAR
+-------------------------------------------- */
+
+.vlt-shop-top-bar {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+
+	@include mq('small') {
+		display: block;
+
+		> * + * {
+			margin-top: 30px;
+		}
+
+	}
+
+	&--style-1 {
+		justify-content: space-between;
+	}
+
+	&--style-2 {
+		justify-content: flex-start;
+	}
+
+	&--style-3 {
+		justify-content: flex-end;
+	}
+
+	.woocommerce-categories-ordering {
+		color: map-get($colors, 'c36');
+
+		a + a {
+			margin-left: 25px;
+		}
+
+		a.active {
+			color: map-get($colors, 'p1');
+		}
+
+	}
+
+	.woocommerce-ordering {
+
+		select {
+			width: 245px;
+			padding: 10px 15px;
+			color: map-get($colors, 'c22');
+			border-color: map-get($colors, 'c3') !important;
+			background-color: map-get($colors, 'c3');
+			background-image: url('../img/select-two.png');
+			background-position: right 15px bottom 50%;
+			background-repeat: no-repeat;
+			background-size: 10px 5px;
+		}
+
+	}
+
+}

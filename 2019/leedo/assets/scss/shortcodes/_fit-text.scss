@@ -1,0 +1,14 @@
+/* SHORTCODE: FIT TEXT
+-------------------------------------------- */
+
+.vlt-fit-text {
+	width: 100%;
+	font-family: map-get($fonts, 'pf');
+	font-weight: 700;
+	line-height: 1;
+
+	@include lowercase {
+		text-transform: lowercase;
+	}
+
+}
